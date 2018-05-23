@@ -122,3 +122,36 @@
 body {
    -webkit-font-smoothing: antialiased;
 }
+
+card {
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    padding: 0 30.599px;
+    padding: 0 1.7rem;
+    background: #f5f1f1;
+    padding: 40px;
+    margin-top: 3em
+}
+
+.card,.card:hover .bio {
+    transition: max-height .25s
+}
+
+.card:hover .bio {
+    max-height: 800px
+}
+
+.card:hover .roles {
+    display: none
+}
+
+.card .bio {
+    position: relative;
+    bottom: 0;
+    overflow: hidden;
+    max-height: 0;
+    left: auto;
+    z-index: 1;
+    background-color: light
+}
