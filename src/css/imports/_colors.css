@@ -78,3 +78,6 @@
     box-shadow: var(--spacing-small) 0 0 var(--primary), var(--spacing-small) 0 0 var(--primary);
   }
 }
+
+.washed-red { color: #FFDFDF }
+.bg-blue { background-color: #357EDD }

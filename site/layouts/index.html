@@ -1,8 +1,8 @@
 {{ define "main" }}
 
-<div class="cover bg-left bg-center-l bg-primary white" style="background-image: url()">
+<div class="cover bg-left bg-center-l bg-info white">
   <div class="mw5 mw7-ns center tc">
-    {{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Params.subtitle) }} {{ partial "newsletter-form" . }}
+    {{ partial "jumbotron" (dict "logoUrl" .Params.logo "title" .Title "subtitle" .Params.subtitle) }}
   </div>
 </div>
 
@@ -10,7 +10,10 @@
 
 {{ partial "nav" . }}
 <section id="about">
-  {{ partial "short-text" .Params.blurb}}
+  {{ partial "short-text" .Params.blurb }}
+  </div>
+
+
 </section>
 <section id="mission">
 <section id="projects">
@@ -24,6 +27,7 @@
   <div class="mhn1-l ph3 center mw7">
 
       <h2 class="f2 b lh-title mb2">Contact</h2>
+        {{ partial "newsletter-form" . }}
 
         {{ partial "contact-form" . }}
 
@@ -33,7 +37,7 @@
 </div>
 
 
-<section id="team" class="cf pt4 pb2 mw8 center">
+<section id="team" class="cf pt4 pb2 mw9 center">
   <div class="mhn1-l ph3 center mw7">
     <h2 class="f2 b lh-title mb2">Our Team</h2>
     {{ with .Site.GetPage "section" "people" }}

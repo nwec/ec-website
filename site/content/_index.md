@@ -1,22 +1,15 @@
 ---
-title: "Raise Green"
-subtitle: Crowdfunding a healthy, just, and sustainable future.
+title: "Evaluation Center"
+subtitle: at Northwestern University
+logo: /img/EC_Logo.svg
 image:
 blurb:
     heading: About
-    text: "Raise Green is a crowdfunding platform for impact investors to reduce air pollution by deploying solar energy."
+    text: The Center for the Evaluation of HIV Prevention Programs in Chicago is a collaborative effort between the Evaluation, Data Integration, and Technical Assistance Program, the Center for Prevention Implementation Methodology at Northwestern University, and the AIDS Foundation of Chicago.
+
 intro:
-    heading: "Our Mission"
-    text: ""
-projects:
-    - image: 
-      text: "Confront environmental challenges with impactful projects"
-    - image: 
-      text: "Reduce air pollution exposure in vulnerable communities"
-    - image: 
-      text: "Confront environmental challenges with impactful projects"
-    - image: 
-      text: "Reduce air pollution exposure in vulnerable communities"
+    heading: "Our Work"
+    text: In addition to providing support for site-specific evaluation, the Evaluation Center is conducting an overarching evaluation of all demonstration sites, which includes a network analysis of linkages between sites, simulation modeling of program milestone attainment, qualitative analysis of implementation challenges and successes, quarterly capacity-building webinars, and analysis of surveillance data to assess impact on HIV incidence over time.
 
 values:
     heading: Our values
