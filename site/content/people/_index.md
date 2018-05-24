@@ -1,19 +1,25 @@
 ---
 title: Our Team
-image: /img/silhoeutte-of-a-huge-crowd-of-people_1048-1580.jpg
+image: /img/group-eval-center.jpg
 people:
-  - imageUrl: 'https://loremflickr.com/200/200/dog?random=1'
-    name: Person
-    roles: Doer
-    text: |
-      Ad labore culpa reprehenderit aute fugiat ad dolor dolore laborum laborum qui ad labore est ea. Cillum veniam excepteur dolor dolore laborum sint cillum ex pariatur do aute aliqua. Sunt do reprehenderit sit officia in in est aliqua. Officia nostrud non duis adipisicing cupidatat cupidatat tempor mollit laboris incididunt deserunt ipsum excepteur aliqua nulla.
+  - imageUrl: /img/gregory.png
+    name: 'Gregory Phillips, PhD'
+    text: >
+      Director, EDIT Program
+
+      Assistant Professor of Medical Social Sciences
+
+
+      Dr. Phillips is a trained epidemiologist who brings years of experience
+      conducting HIV research focusing on understanding social-, sexual-, and
+      network-level factors that drive health disparities among men who have sex
+      with men, particularly young MSM and Black MSM.
   - imageUrl: 'https://loremflickr.com/200/200/dog?random=2'
     name: Other Person
-    roles: Maker
     text: |
       Person who does it.
   - imageUrl: /img/profile_smile.jpeg
     name: Third Wheel
-    roles: Dreamer
     text: Taggin along
 ---
+
