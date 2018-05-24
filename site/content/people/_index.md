@@ -7,12 +7,16 @@ people:
     text: |-
       Director of the EDIT Program -
       Assistant Professor of Medical Social Sciences
-  - imageUrl: 'https://loremflickr.com/200/200/dog?random=2'
-    name: Other Person
+  - imageUrl: /img/george.png
+    name: 'George J Greene, PhD'
+    text: |+
+      Associate Director of the EDIT Program - 
+      Research Assistant Professor of Medical Social Sciences
+
+  - imageUrl: /img/amy.png
+    name: 'Amy K Johnson, PhD'
     text: |
-      Person who does it.
-  - imageUrl: /img/profile_smile.jpeg
-    name: Third Wheel
-    text: Taggin along
+      Affiliate Faculty of the EDIT Program - 
+      Research Assistant Professor of Pediatrics (Adolescent Medicine)
 ---
 
