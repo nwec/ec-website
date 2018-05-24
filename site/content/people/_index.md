@@ -7,7 +7,7 @@ people:
     text: >
       Director, EDIT Program
 
-      Assistant Professor of Medical Social Sciences
+      Assistant Professor of Medical Social Sciences - 
 
 
       Dr. Phillips is a trained epidemiologist who brings years of experience
