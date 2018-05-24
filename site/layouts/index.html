@@ -1,14 +1,15 @@
 {{ define "main" }}
-
-<div class="cover bg-left bg-center-l bg-info white">
-  <div class="mw5 mw7-ns center tc">
+<section id="cover">
+<div class="cover bg-info white pa3">
+  <div class="mw-5 mw7-ns center tc">
     {{ partial "jumbotron" (dict "logoUrl" .Params.logo "title" .Title "subtitle" .Params.subtitle) }}
   </div>
 </div>
+</section>
 
-
-
+<section id="navbar" class="z-4 shadow-5">
 {{ partial "nav" . }}
+</section>
 <section id="about">
   {{ partial "short-text" .Params.blurb }}
   </div>
