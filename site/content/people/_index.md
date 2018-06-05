@@ -45,6 +45,18 @@ people:
       Dr. Beach is a trained lawyer and molecular biologist who brings
       experience leading research and evaluations on how stigma affects chronic
       disease management and health outcomes in sexual and gender minority
-      populations.
+      populations. 
+  - imageUrl: /img/peter-lindeman.jpg
+    name: 'Peter Lindeman, MA'
+    text: >
+      Project Coordinator, 
+
+      EDIT Program
+
+
+      Peter is a trained program evaluator with experience conducting large,
+      multisite evaluations in urban settings. His research and evaluation
+      interests focus on improving community response to health disparities
+      among marginalized populations.
 ---
 
