@@ -1,22 +1,24 @@
-<section class="ph3 ph5-ns pv5">
-  <article class="mw8 center br2  bg-white cf">
-    <div class="dt-ns dt--fixed-ns fl">
-      <div class=" v-mid">
-    <img src="{{ .image }}" class="br-100 h4 w4 w-100 h-100 dib ba b--none pa2 mw5" title="Photo of a kitty staring at you">
+
+
+    <!-- fits the card -->
+    <div class="team-card card-1 grow  pointer animated-longer bg-primary white br4 ma1 pa1 h-50">
+      <div class="fl w-20 pa2 dib mw5">
+    <img src="{{ .image }}" class="w-100 br-100" title="" id="team-photo">
       </div>
-      <div class="pa3 pa4-ns dtc-ns v-mid">
+      <div class="fl w-80 pa2 dib">
         <div>
-          <h2 class="fw4 blue mt0 mb3">{{.name}} </h2>
-          <h2 class="fw4 blue mt0 mb3">{{.roles}} </h2>
-          <p class="black-70 measure lh-copy mv0">
+          <h2 class="fw5 mb2">{{.name}} </h2>
+          <h2 class="roles animated-long d2 fadeIn ease-out-circ">{{.role1}} </h2>
+          <h3 class="roles animated-long d3 fadeIn ease-out-circ">{{.role2}} </h3>
+          <p class="bio measure lh-copy animated fadeIn ease-out-quint d3 a1">
           {{ .text}}
           </p>
         </div>
       </div>
 
     </div>
-  </article>
-</section>
+
+
 <!-- <article class="cf">
   <div class="fl w-100 w-50-ns bg-near-white tc">
     <h1>Column One</h1>

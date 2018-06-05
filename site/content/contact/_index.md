@@ -1,6 +1,6 @@
 ---
 title: "Contact"
-logo: "/img/EC_logo.svg"
+logo: "/img/logos/EC_logo.svg"
 contact_entries:
   - heading: Address
     text: "123 address place"
