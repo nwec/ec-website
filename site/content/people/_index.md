@@ -69,6 +69,10 @@ people:
       Emma was trained in Public Health and has experience conducting program
       evaluation in diverse settings. Her primary interests include HIV
       prevention and adolescent reproductive health.
-  - {}
+  - imageUrl: /img/christian-adames.jpg
+    name: Christian Adames
+    text: |+
+      Data Assistant Associate,
+      EDIT Program
 ---
 
