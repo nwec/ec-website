@@ -38,8 +38,20 @@ intro:
         that focus on process, implementation, and outcome evaluations,
         including organizational network analyses.
     - image: 'https://picsum.photos/200/300?random'
-      text: |
+      text: >-
         EDIT CARES
+
+
+        Traditionally, most of EDIT’s work with community agencies is funded
+        through entities like the Chicago Department of Public Health, primarily
+        centered on HIV prevention and care. We recognized that this limits the
+        types of organizations and programs that we are able to provide services
+        to, thereby restricting our impact on the community. The result of our
+        reflection is EDIT CARES (Community Award for Research and Evaluation
+        Services). Starting in Spring 2018, EDIT will release an annual request
+        for proposals (RFP) to community organizations in Chicago to fund EDIT
+        staff time to provide pro-bono evaluation, data integration, and other
+        technical assistance services.
     - image: 'https://picsum.photos/200/300?random'
       text: |
         Be Heard
