@@ -2,7 +2,7 @@
 title: Our Team
 image: /img/group-eval-center.jpg
 people:
-  - imageUrl: /img/gregory.png
+  - imageUrl: /img/resized/gregory.png
     name: 'Gregory Phillips, PhD'
     role1: Director of the EDIT Program
     role2: Assistant Professor of Medical Social Sciences
@@ -12,7 +12,7 @@ people:
       conducting HIV research focusing on understanding social-, sexual-, and
       network-level factors that drive health disparities among men who have sex
       with men, particularly young MSM and Black MSM.
-  - imageUrl: /img/george.png
+  - imageUrl: /img/resized/george.png
     name: 'George J Greene, PhD'
     role1: Associate Director of the EDIT Program
     role2: Research Assistant Professor of Medical Social Sciences
@@ -21,7 +21,7 @@ people:
       Dr. Greene is a community psychologist with years of community-based
       program evaluation experience, specializing in interventions targeting
       health disparities of racial, ethnic, and sexual minority communities.
-  - imageUrl: /img/amy.png
+  - imageUrl: /img/resized/amy.png
     name: 'Amy K Johnson, PhD'
     text: >
       Affiliate Faculty of the EDIT Program -
@@ -32,7 +32,7 @@ people:
       Dr. Johnson is a trained mixed methods program evaluator with a background
       in social work. Her interest lies in applied HIV and STI prevention and
       care intervention research.
-  - imageUrl: /img/lauren.png
+  - imageUrl: /img/resized/lauren.png
     name: 'Lauren B Beach, JD/PhD'
     text: >
       Postdoctoral Scholar, ISGMH
@@ -42,7 +42,7 @@ people:
       experience leading research and evaluations on how stigma affects chronic
       disease management and health outcomes in sexual and gender minority
       populations.
-  - imageUrl: /img/peter-lindeman.jpg
+  - imageUrl: /img/resized/peter-lindeman.jpg
     name: 'Peter Lindeman, MA'
     text: >
       Project Coordinator,
@@ -54,7 +54,7 @@ people:
       multisite evaluations in urban settings. His research and evaluation
       interests focus on improving community response to health disparities
       among marginalized populations.
-  - imageUrl: /img/emma-reidy.jpg
+  - imageUrl: /img/resized/emma-reidy.jpg
     name: 'Emma Reidy, MPH'
     text: >
       Project Coordinator,
@@ -65,23 +65,23 @@ people:
       Emma was trained in Public Health and has experience conducting program
       evaluation in diverse settings. Her primary interests include HIV
       prevention and adolescent reproductive health.
-  - imageUrl: /img/christian-adames.jpg
+  - imageUrl: /img/resized/christian-adames.jpg
     name: Christian Adames
     text: |+
       Data Assistant Associate,
       EDIT Program
 
-  - imageUrl: /img/emily-bettin.jpg
+  - imageUrl: /img/resized/emily-bettin.jpg
     name: Emily Bettin
     text: |
       Research Study Coordinator,
       ISGMH
-  - imageUrl: /img/dylan-felt.png
+  - imageUrl: /img/resized/dylan-felt.png
     name: Dylan Felt
     text: |
       Data Assistant Associate,
       EDIT & CONNECT Program
-  - imageUrl: /img/rachel-marro.jpg
+  - imageUrl: /img/resized/rachel-marro.jpg
     name: Rachel Marro
     text: |
       Data Assistant Associate,

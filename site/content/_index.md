@@ -1,7 +1,7 @@
 ---
 title: "Evaluation Center"
 subtitle: at Northwestern University
-logo: /img/EC_Logo.png
+logo: /img/logos/EC_logo.png
 image:
 blurb:
     heading: About

@@ -11,6 +11,10 @@ import svgstore from "gulp-svgstore";
 import svgmin from "gulp-svgmin";
 import inject from "gulp-inject";
 import cssnano from "cssnano";
+import jimp from "gulp-jimp-resize";
+import path from "path";
+import rename from "gulp-rename";
+import flatten from "gulp-flatten";
 
 const browserSync = BrowserSync.create();
 const hugoBin = `./bin/hugo.${process.platform === "win32" ? "exe" : process.platform}`;
@@ -22,8 +26,10 @@ if (process.env.DEBUG) {
 
 gulp.task("hugo", (cb) => buildSite(cb));
 gulp.task("hugo-preview", (cb) => buildSite(cb, ["--buildDrafts", "--buildFuture"]));
-gulp.task("build", ["css", "js", "cms-assets", "hugo"]);
+gulp.task("build", ["css", "js", "cms-assets", "hugo", "resize-people-images"]);
 gulp.task("build-preview", ["css", "js", "cms-assets", "hugo-preview"]);
+
+const stripDir = function (p) { p.dirname = ''; };
 
 gulp.task("css", () => (
   gulp.src("./src/css/*.css")
@@ -57,7 +63,7 @@ gulp.task("js", (cb) => {
 
 gulp.task("svg", () => {
   const svgs = gulp
-    .src("site/static/img/icons-*.svg")
+    .src("site/static/img/logos/icons-*.svg")
     .pipe(svgmin())
     .pipe(svgstore({inlineSvg: true}));
 
@@ -71,7 +77,30 @@ gulp.task("svg", () => {
     .pipe(gulp.dest("site/layouts/partials/"));
 });
 
-gulp.task("server", ["hugo", "css", "cms-assets", "js", "svg"], () => {
+gulp.task('resize-people-images', function() {
+    return gulp.src(
+        './site/static/img/people/*.{png,jpg,bmp}')
+    .pipe(jimp({
+        sizes: [
+            { "height": 200}
+        ]
+    }))
+    .pipe(rename(stripDir))
+//     gulp.task("moveFiles",function(){
+//     return gulp.src(sourceFiles)
+//       .pipe(gulp.dest("../dist/img/resized"));
+// });
+//     .pipe(gulp.dest(function (file) {
+//     console.log(file.path);
+//     return (file.basename, 'resized');
+// }));
+
+.pipe(gulp.dest('./dist/img/resized'));
+
+
+});
+
+gulp.task("server", ["hugo", "css", "cms-assets", "js", "svg", "resize-people-images"], () => {
   browserSync.init({
     server: {
       baseDir: "./dist"

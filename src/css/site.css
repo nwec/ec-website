@@ -158,13 +158,13 @@ transition: max-height 0.15s ease-out;
   clip-path: circle(80px at center);
 }
 
-.img-container {
+/* .img-container {
     width: 200px;
     height: 120px;
-}
+} */
 
 /* resize images */
-.img-container img {
+/* .img-container img {
     width: 100%;
     height: auto;
-}
+} */
