@@ -21,8 +21,22 @@ intro:
         quarterly capacity-building webinars, and analysis of surveillance data
         to assess impact on HIV incidence over time.
     - image: 'https://picsum.photos/200/300?random'
-      text: |
+      text: >-
         Project PrIDE
+
+
+        To build upon the success of the Center for the Evaluation of HIV
+        Prevention Programs in Chicago (Evaluation Center), the EDIT Program‘s
+        Evaluation Center Extension was funded to to evaluate PrEP demonstration
+        projects, as well as Data to Care demonstration projects using
+        surveillance data sources to identify persons not in HIV care,
+        specifically targeting men who have sex with men (MSM)and transgender
+        persons. In addition to providing technical assistance and capacity
+        building for site-specific evaluation, the Evaluation Center Extension
+        is conducting an overarching evaluation of all demonstration sites,
+        including the development and execution of rigorous evaluation plans
+        that focus on process, implementation, and outcome evaluations,
+        including organizational network analyses.
     - image: 'https://picsum.photos/200/300?random'
       text: |
         EDIT CARES
