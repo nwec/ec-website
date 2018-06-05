@@ -58,5 +58,17 @@ people:
       multisite evaluations in urban settings. His research and evaluation
       interests focus on improving community response to health disparities
       among marginalized populations.
+  - imageUrl: /img/emma-reidy.jpg
+    name: 'Emma Reidy, MPH'
+    text: >
+      Project Coordinator, 
+
+      EDIT Program
+
+
+      Emma was trained in Public Health and has experience conducting program
+      evaluation in diverse settings. Her primary interests include HIV
+      prevention and adolescent reproductive health.
+  - {}
 ---
 
