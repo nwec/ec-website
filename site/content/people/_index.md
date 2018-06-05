@@ -4,9 +4,16 @@ image: /img/group-eval-center.jpg
 people:
   - imageUrl: /img/gregory.png
     name: 'Gregory Phillips, PhD'
-    text: |-
+    text: >
       Director of the EDIT Program -
+
       Assistant Professor of Medical Social Sciences
+
+
+      Dr. Phillips is a trained epidemiologist who brings years of experience
+      conducting HIV research focusing on understanding social-, sexual-, and
+      network-level factors that drive health disparities among men who have sex
+      with men, particularly young MSM and Black MSM.
   - imageUrl: /img/george.png
     name: 'George J Greene, PhD'
     text: |+
