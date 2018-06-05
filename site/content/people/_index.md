@@ -23,6 +23,8 @@ people:
       health disparities of racial, ethnic, and sexual minority communities.
   - imageUrl: /img/resized/amy.png
     name: 'Amy K Johnson, PhD'
+    role1:
+    role2:
     text: >
       Affiliate Faculty of the EDIT Program -
 
@@ -34,6 +36,8 @@ people:
       care intervention research.
   - imageUrl: /img/resized/lauren.png
     name: 'Lauren B Beach, JD/PhD'
+    role1:
+    role2:
     text: >
       Postdoctoral Scholar, ISGMH
 
@@ -44,6 +48,8 @@ people:
       populations.
   - imageUrl: /img/resized/peter-lindeman.jpg
     name: 'Peter Lindeman, MA'
+    role1:
+    role2:
     text: >
       Project Coordinator,
 
@@ -56,6 +62,8 @@ people:
       among marginalized populations.
   - imageUrl: /img/resized/emma-reidy.jpg
     name: 'Emma Reidy, MPH'
+    role1:
+    role2:
     text: >
       Project Coordinator,
 
@@ -67,22 +75,30 @@ people:
       prevention and adolescent reproductive health.
   - imageUrl: /img/resized/christian-adames.jpg
     name: Christian Adames
+    role1:
+    role2:
     text: |+
       Data Assistant Associate,
       EDIT Program
 
   - imageUrl: /img/resized/emily-bettin.jpg
     name: Emily Bettin
+    role1:
+    role2:
     text: |
       Research Study Coordinator,
       ISGMH
   - imageUrl: /img/resized/dylan-felt.png
     name: Dylan Felt
+    role1:
+    role2:
     text: |
       Data Assistant Associate,
       EDIT & CONNECT Program
   - imageUrl: /img/resized/rachel-marro.jpg
     name: Rachel Marro
+    role1:
+    role2:
     text: |
       Data Assistant Associate,
       EDIT Program
