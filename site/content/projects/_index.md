@@ -53,8 +53,20 @@ intro:
         staff time to provide pro-bono evaluation, data integration, and other
         technical assistance services.
     - image: 'https://picsum.photos/200/300?random'
-      text: |
+      text: >-
         Be Heard
+
+
+        Often transgender and gender-nonconforming persons change their voice in
+        order to better represent their gender identity. However, many do so
+        without any vocal training and thus risk harming their voice. As a
+        result, Be Heard was developed to address this health concern through
+        educating young transgender and gender non-conforming persons on how to
+        alter their voice without causing damage. This program empowers
+        transgender and gender-nonconforming youth by not enforcing strict
+        standards on what it means to sound feminine, but rather provides
+        healthy techniques for youth to use if they choose to modify their voice
+        as a form of gender expression.
   heading: What we offer
   description: >
     Love ut aliquid ex ea commodi consequatur? Quis autem vel eum iure
