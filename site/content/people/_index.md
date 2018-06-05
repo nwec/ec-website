@@ -75,12 +75,16 @@ people:
       Data Assistant Associate,
       EDIT Program
 
-  - {}
   - imageUrl: /img/emily-bettin.jpg
     name: Emily Bettin
     text: |
       Research Study Coordinator, 
       ISGMH
+  - imageUrl: /img/dylan-felt.png
+    name: Dylan Felt
+    text: |
+      Data Assistant Associate,
+      EDIT & CONNECT Program
   - {}
 ---
 
