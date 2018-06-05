@@ -1,23 +1,23 @@
 
-  <article class="grow team-card mw8 center br2  cf ph3 ph5-ns pv5">
+
     <!-- fits the card -->
-    <div class="dt-ns dt--fixed-ns fl bg-info br4">
-      <div class="v-mid img-container">
-    <img src="{{ .image }}" class="br-pill mw-100 mh-100 dib b--none pa2" title="" id="team-photo">
+    <div class="team-card card-1 grow  animated-longer bg-primary white br4 ma1 pa1 h-50">
+      <div class="fl w-20 pa2 dib mw5">
+    <img src="{{ .image }}" class="w-100 br-100" title="" id="team-photo">
       </div>
-      <div class="pa3 pa4-ns dtc-ns v-mid">
+      <div class="fl w-80 pa2 dib">
         <div>
-          <h2 class="fw4 blue mt0 mb3">{{.name}} </h2>
-          <h2 class="fw4 blue mt0 mb3 roles">{{.role1}} </h2>
-          <h2 class="fw4 blue mt0 mb3 roles">{{.role2}} </h2>
-          <p class="bio black-70 measure lh-copy mv0 animated fadeInUp ease-out-circ">
+          <h2 class="fw5 mb2">{{.name}} </h2>
+          <h2 class="roles animated-long d2 fadeIn ease-out-circ">{{.role1}} </h2>
+          <h3 class="roles animated-long d3 fadeIn ease-out-circ">{{.role2}} </h3>
+          <p class="bio measure lh-copy animated fadeIn ease-out-circ d3">
           {{ .text}}
           </p>
         </div>
       </div>
 
     </div>
-  </article>
+
 
 <!-- <article class="cf">
   <div class="fl w-100 w-50-ns bg-near-white tc">
