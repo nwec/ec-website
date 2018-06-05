@@ -135,35 +135,36 @@ body {
 
 }
 
-card {
-    width: auto;
+.team-card {
+overflow: hidden;
+transition: max-height 0.15s ease-out;
+}
+
+.bio {
+    display: none;
+		max-height: 0px;
+		height: 0px;
+}
+
+.team-card:hover .bio {
+    display: inherit;
+		height: auto;
+		width:auto;
+		max-height: 800px;
+		transition: max-height 0.25s ease-in;
+}
+
+.clip-circle {
+  clip-path: circle(80px at center);
+}
+
+.img-container {
+    width: 200px;
+    height: 120px;
+}
+
+/* resize images */
+.img-container img {
+    width: 100%;
     height: auto;
-    overflow: hidden;
-    /* padding: 0 30.599px;
-    padding: 0 1.7rem; */
-    background: var(--primary);
-    /* padding: 40px; */
-    /* margin-top: 3em */
-}
-
-.card,.card:hover .bio {
-    transition: max-height .25s
-}
-
-.card:hover .bio {
-    max-height: 800px
-}
-
-.card:hover .roles {
-    display: none
-}
-
-.card .bio {
-    position: relative;
-    bottom: 0;
-    overflow: hidden;
-    max-height: 0;
-    left: auto;
-    z-index: 1;
-    background-color: light
 }

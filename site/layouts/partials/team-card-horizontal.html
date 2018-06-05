@@ -1,14 +1,16 @@
-<section class="ph3 ph5-ns pv5">
-  <article class="mw8 center br2  bg-white cf">
-    <div class="dt-ns dt--fixed-ns fl">
-      <div class=" v-mid">
-    <img src="{{ .image }}" class="br-100 h4 w4 w-100 h-100 dib ba b--none pa2 mw5" title="Photo of a kitty staring at you">
+
+  <article class="grow team-card mw8 center br2  cf ph3 ph5-ns pv5">
+    <!-- fits the card -->
+    <div class="dt-ns dt--fixed-ns fl bg-info br4">
+      <div class="v-mid img-container">
+    <img src="{{ .image }}" class="br-pill mw-100 mh-100 dib b--none pa2" title="" id="team-photo">
       </div>
       <div class="pa3 pa4-ns dtc-ns v-mid">
         <div>
           <h2 class="fw4 blue mt0 mb3">{{.name}} </h2>
-          <h2 class="fw4 blue mt0 mb3">{{.roles}} </h2>
-          <p class="black-70 measure lh-copy mv0">
+          <h2 class="fw4 blue mt0 mb3 roles">{{.role1}} </h2>
+          <h2 class="fw4 blue mt0 mb3 roles">{{.role2}} </h2>
+          <p class="bio black-70 measure lh-copy mv0 animated fadeInUp ease-out-circ">
           {{ .text}}
           </p>
         </div>
@@ -16,7 +18,7 @@
 
     </div>
   </article>
-</section>
+
 <!-- <article class="cf">
   <div class="fl w-100 w-50-ns bg-near-white tc">
     <h1>Column One</h1>
