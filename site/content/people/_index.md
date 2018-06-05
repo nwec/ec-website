@@ -74,5 +74,13 @@ people:
     text: |+
       Data Assistant Associate,
       EDIT Program
+
+  - {}
+  - imageUrl: /img/emily-bettin.jpg
+    name: Emily Bettin
+    text: |
+      Research Study Coordinator, 
+      ISGMH
+  - {}
 ---
 
