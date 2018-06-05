@@ -35,6 +35,16 @@ people:
 
       Dr. Johnson is a trained mixed methods program evaluator with a background
       in social work. Her interest lies in applied HIV and STI prevention and
-      care intervention research.
+      care intervention research. 
+  - imageUrl: /img/lauren.png
+    name: 'Lauren B Beach, JD/PhD'
+    text: >
+      Postdoctoral Scholar, ISGMH
+
+
+      Dr. Beach is a trained lawyer and molecular biologist who brings
+      experience leading research and evaluations on how stigma affects chronic
+      disease management and health outcomes in sexual and gender minority
+      populations.
 ---
 
