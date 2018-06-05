@@ -85,6 +85,10 @@ people:
     text: |
       Data Assistant Associate,
       EDIT & CONNECT Program
-  - {}
+  - imageUrl: /img/rachel-marro.jpg
+    name: Rachel Marro
+    text: |
+      Data Assistant Associate,
+      EDIT Program
 ---
 
