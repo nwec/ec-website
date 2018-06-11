@@ -80,6 +80,17 @@ collections: # A list of collections the CMS should be able to edit
               - {label: Heading, name: heading, widget: string}
               - {label: Text, name: text, widget: text}
               - {label: Image, name: imageUrl, widget: image}
+      - file: "site/content/faq/_index.md"
+        label: "FAQ"
+        name: "faq"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - label: Questions
+            name: questions
+            widget: list
+            fields:
+              - {label: Question, name: question, widget: string}
+              - {label: Answer, name: answer, widget: text}
   - name: "people" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "People" # Used in the UI, ie.: "New Post"
     files:
