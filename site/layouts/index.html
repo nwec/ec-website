@@ -12,18 +12,16 @@
 </section>
 <section id="about">
   {{ partial "short-text" .Params.blurb }}
-  </div>
-
-
 </section>
 <section id="mission">
+
 <section id="projects">
    {{ partial "2-up" .Params }}
 </section>
 </section>
 
 
-<div class="bg-saffron">
+<div class="bg-info white">
   <section id="contact" class="center cf pt4 pb2 mw8 center">
   <div class="mhn1-l ph3 center mw7">
 
@@ -38,7 +36,7 @@
 </div>
 
 
-<section id="team" class="center pt4 pb2 mw8 center ">
+<section id="team" class="center pt4 pb2 mw8 center">
 
   <div class="mhn1-l ph3 cf">
     <h2 class="f2 b lh-title mb2">Our Team</h2>
@@ -55,18 +53,25 @@
   </div>
 </section>
 
-
-
-
-
-
-<section id="board" class="bg-half-baked">
-{{ partial "long-text" (dict "heading" .Params.values.heading "text" .Params.values.text "buttonText" "Read more" "buttonLink" "/values") }}
+<div class="bg-success">
+<section id="faq" class="center pt4 pb2 mw8 center">
+      <h2 class="f2 b lh-title mb2 white">Questions and Answer</h2>
+  {{ with .Site.GetPage "section" "faq" }}
+  <!-- {{ printf "%#v" .Params.people }} -->
+  {{ range $index, $element := .Params.questions}}
+  <!-- {{ printf "%#v" $element }} -->
+  <!-- <div class="fl w-100 w-50-ns pa1"> -->
+  {{ partial "faq-card" (dict "question" $element.question "answer" $element.answer )}}
+<!-- </div> -->
+  {{ end }}
+  {{ end }}
+</section>
 </div>
 
+<!--
 <section id="blog">
 {{ partial "blog" . }}
-</section>
+</section> -->
 
 
 

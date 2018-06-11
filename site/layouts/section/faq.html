@@ -4,9 +4,9 @@
 <!-- {{ printf "%#v" .Params }} -->
 <div class="mw7 center ph3 pt4">
 
-  {{ range $index, $element := .Params.people }}
+  {{ range $index, $element := .Params.questions }}
   <!-- {{ printf "%#v" $element }} -->
-  {{ partial "team-card-horizontal" (dict "name" $element.name "role1" $element.role1 "role2" $element.role2 "text" $element.text "image" $element.imageUrl)}}
+  {{ partial "faq-card" (dict "question" $element.question "answer" $element.answer )}}
   {{ end }}
 
 </div>
