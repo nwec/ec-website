@@ -29,7 +29,7 @@
     <!-- {{ printf "%#v" .Params.people }} -->
     {{ range $index, $element := .Params.people}}
     <!-- {{ printf "%#v" $element }} -->
-    <div class="fl w-100 w-50-ns pa1">
+    <div class=" fl w-100 w-50-ns pa1">
     {{ partial "team-card-horizontal" (dict "name" $element.name "role1" $element.role1 "role2" $element.role2 "text" $element.text "image" $element.imageUrl)}}
   </div>
     {{ end }}
