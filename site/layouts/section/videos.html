@@ -1,0 +1,14 @@
+{{ define "main" }}
+
+{{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title) }}
+<!-- {{ printf "%#v" .Params }} -->
+<div class="mw7 center ph3 pt4">
+
+  {{ range $index, $element := .Params.videos }}
+  <!-- {{ printf "%#v" $element }} -->
+  {{ partial "gallery" (dict "id" $element.id)}}
+  {{ end }}
+
+</div>
+
+{{ end }}

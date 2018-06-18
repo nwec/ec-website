@@ -55,7 +55,25 @@
 </section>
 </div>
 
-{{ partial "gallery"  }}
+<div class="bg-success">
+<section id="faq" class="center pt4 pb2 mw8 center">
+
+  {{ with .Site.GetPage "section" "videos" }}
+        <h2 class="f2 b lh-title mb2 white">Videos</h2>
+  <!-- {{ printf "%#v" .Params.people }} -->
+  {{ range $index, $element := .Params.videos}}
+  <!-- {{ printf "%#v" $element }} -->
+  <!-- <div class="fl w-100 w-50-ns pa1"> -->
+
+  {{ partial "youtube" (dict "id" $element.id )}}
+
+<!-- </div> -->
+  {{ end }}
+  {{ end }}
+</section>
+</div>
+
+
 
 
 <div class="bg-primary white">
