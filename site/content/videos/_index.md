@@ -1,6 +1,5 @@
 ---
 youtube:
-  - id: Nr8QoGzHyyw
-  - id: spTwB7vJ0U8
+- id: Nr8QoGzHyyw
+- id: spTwB7vJ0U8
 ---
-
