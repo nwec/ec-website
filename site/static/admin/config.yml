@@ -109,16 +109,16 @@ collections: # A list of collections the CMS should be able to edit
               - {label: Role1, name: role1, widget: text}
               - {label: Role2, name: role2, widget: text}
               - {label: Text, name: text, widget: text}
-  - label: "Videos List"
-    name: "videos"
-    widget: "list"
-    field:
-      - {label: Video ID, name: id, widget: string}
   - name: "videos" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Videos" # Used in the UI, ie.: "New Post"
     files:
       - file: "site/content/videos/_index.md" # The path to the folder where the documents are stored
-        label: "Youtube IDs"
-        name: "videos"
+        label: "Video List"
+        name: "video_list"
         fields:
-          - {label: ID, name: id, widget: string, required: true}
+          - label: Youtube IDs
+            name: youtube
+            widget: list
+            fields:
+              - {label: ID, name: id, widget: string}
+              # - {label: Description, name: text, widget: text}
