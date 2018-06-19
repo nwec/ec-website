@@ -4,10 +4,10 @@
 
 		<div class=" center mb4 tc">
 
-			<img src="./img/logos/EC_logo.png" alt="logo" class="db w4 center mb4 br0">
+			<img src={{ string .Site.Params.logoUrl }}  alt="logo" class="db w4 center mb4 br0">
 			<!-- <p class="f3 lh-title light-gray b tc mb2">Newsletter subscribe</p> -->
 			<!-- <p>Get awesome news from us in your inbox every two weeks. Be the first to learn about new projects.</p> -->
-			<div class="f1 lh-title"> {{ .Site.Params.org }} </div>
+			<div class="f3 lh-subheading"> {{ .Site.Params.org }} </div>
 			{{/* {{ partial "newsletter-form" . }} */}}
 
 		<!-- </div> -->

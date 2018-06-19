@@ -1,17 +1,17 @@
 
 
     <!-- fits the card -->
-    <div class="relative grow pointer" style="height:250px;">
-    <div class="team-card card-1  animated bg-primary white br4 ma1">
-      <div class="fl w-20 pa2 dib mw5">
+    <div class="relative grow pointer">
+    <div id="team-card" class="team-card card-2 bg-primary white br4 ma1">
+      <div class="fl w-third pa2 dib mw5">
     <img src="{{ .image }}" class="w-100 br-100" title="" id="team-photo">
       </div>
-      <div class="fl w-80 pa2 dib">
+      <div class="fl w-two-thirds pa2 dib">
         <div>
           <h2 class="fw5 mb2">{{.name}} </h2>
-          <h2 class="roles animated-long d2 fadeIn ease-out-circ">{{.role1}} </h2>
-          <h3 class="roles animated-long d3 fadeIn ease-out-circ">{{.role2}} </h3>
-          <p class="f7 bio measure lh-copy animated fadeIn ease-out-quint d3 a1">
+          <h2 class="roles animated d2 a2 fadeIn ease-in-out-quart">{{.role1}} </h2>
+          <h3 class="roles animated d3 a2 fadeIn ease-in-out-quart">{{.role2}} </h3>
+          <p class="f7 bio measure lh-copy animated fadeIn a2 ease-in-out-quart ">
           {{ .text}}
           </p>
         </div>

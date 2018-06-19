@@ -1,11 +1,5 @@
 {{ define "main" }}
-<section id="cover">
-<div class="cover bg-info white pa3">
-  <div class="mw-5 mw7-ns center tc">
-    {{ partial "jumbotron" (dict "logoUrl" .Params.logo "title" .Title "subtitle" .Params.subtitle) }}
-  </div>
-</div>
-</section>
+
 
 
 
@@ -31,7 +25,7 @@
     <!-- {{ printf "%#v" .Params.people }} -->
     {{ range $index, $element := .Params.people}}
     <!-- {{ printf "%#v" $element }} -->
-    <div class=" fl w-100 w-50-ns pa1">
+    <div class="fl w-100 w-50-ns pa1">
     {{ partial "team-card-horizontal" (dict "name" $element.name "role1" $element.role1 "role2" $element.role2 "text" $element.text "image" $element.imageUrl)}}
   </div>
     {{ end }}
@@ -40,9 +34,10 @@
   </div>
 </section>
 
-<div class="bg-success">
-<section id="faq" class="center pt4 pb2 mw7 center">
-      <h2 class="f2 b lh-title mb2 white">Frequently Asked Questions</h2>
+<div class="bg-success mhn1-l ph3 ">
+<section id="faq" class="center pt4 pb2 mw7 mhn1-l ph3 cf">
+
+<h2 class="f2 b lh-title mb2 white">Frequently Asked Questions</h2>
   {{ with .Site.GetPage "section" "faq" }}
   <!-- {{ printf "%#v" .Params.people }} -->
   {{ range $index, $element := .Params.questions}}
@@ -55,23 +50,26 @@
 </section>
 </div>
 
-<div class="">
-<section id="videos" class="center cf pt4 pb2 mw7 center">
 
+
+<section id="videos" class="center pt4 pb2 mw7 mhn1-l ph3 ">
+  <h2 class="f2 b lh-title mb2 ">Videos</h2>
+  <article class="mhn1-l ph3 cf">
   {{ with .Site.GetPage "section" "videos" }}
-        <h2 class="f2 b lh-title mb2 ">Videos</h2>
-  <!-- {{ printf "%#v" .Params.people }} -->
-  {{ range $index, $element := .Params.videos}}
-  <!-- {{ printf "%#v" $element }} -->
-  <!-- <div class="fl w-100 w-50-ns pa1"> -->
+
+
+  {{ range $index, $element := .Params.youtube}}
+
+  <div class="fl w-100 w-50-ns pa1 ">
 
   {{ partial "youtube" (dict "id" $element.id )}}
 
-<!-- </div> -->
+  </div>
   {{ end }}
   {{ end }}
+</article>
 </section>
-</div>
+
 
 
 
