@@ -4,7 +4,9 @@
   <body class="sans-serif">
 
     {{ partial "hero" .}}
+    <section id="navbar" class="z-4 shadow-5">
     {{ partial "nav" . }}
+    </section>
     {{ block "main" . }}{{ end }}
     {{ partial "footer" . }}
   </body>
