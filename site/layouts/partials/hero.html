@@ -5,6 +5,8 @@
     {{ if .Page.Params.image }}
     {{/* put logo here, off to the side maybe? */}}
     {{ partial "jumbotron" (dict "image" .Page.Params.image "title" .Page.Params.title "subtitle" .Page.Params.subtitle) }}
+    {{ else }}
+    {{ partial "jumbotron" (dict "image" .Site.Params.logoUrl "title" .Page.Params.title "subtitle" .Page.Params.subtitle) }}
     {{ end }}
   </div>
 </div>
