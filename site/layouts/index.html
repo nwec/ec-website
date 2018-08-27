@@ -9,16 +9,15 @@
 <section id="about">
   {{ partial "short-text" .Params.blurb }}
 </section>
-<section id="mission">
+
 
 <section id="projects">
-   {{ partial "2-up" .Params }}
+   {{ partial "2-up" .Params.intro }}
 </section>
-</section>
+
 
 
 <section id="team" class="center pt4 pb2 mw7">
-
   <div class="mhn1-l ph3 cf">
     <h2 class="f2 b lh-title mb2">Our Team</h2>
     {{ with .Site.GetPage "section" "people" }}
@@ -42,9 +41,9 @@
   <!-- {{ printf "%#v" .Params.people }} -->
   {{ range $index, $element := .Params.questions}}
   <!-- {{ printf "%#v" $element }} -->
-  <!-- <div class="fl w-100 w-50-ns pa1"> -->
+  <div class="fl w-100 w-50-ns pa1">
   {{ partial "faq-card" (dict "question" $element.question "answer" $element.answer )}}
-<!-- </div> -->
+  </div>
   {{ end }}
   {{ end }}
 </section>
