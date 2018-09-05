@@ -91,6 +91,7 @@ collections: # A list of collections the CMS should be able to edit
             fields:
               - {label: Question, name: question, widget: string}
               - {label: Answer, name: answer, widget: text}
+              - {label: File, name: file, widget: file, default: "/files/"}
   - name: "people" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "People" # Used in the UI, ie.: "New Post"
     files:
