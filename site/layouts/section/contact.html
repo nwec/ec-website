@@ -3,18 +3,31 @@
 <div class="ph3 bg-off-white">
 	<div class="center mw6 pv3">
 
-		<img src="{{ .Params.logo }}" alt="" class="db w4 center pv4"> {{ .Content }}
+		<img src="{{ .Params.logo }}" alt="" class="db w4 center pv4">
+
+		{{ .Content }}
 
 		<div class="flex-ns mb3">
-			{{ range .Params.contact_entries }}
-			<div>
-				<h4 class="f4 b lh-title mb2 primary">{{ .heading }}</h4>
-				<p>{{ .text }}</p>
-			</div>
+	     {{ range .Params.events }}
+				<div>
+					<h4 class="f4 b lh-title mb2 primary">{{ .heading }}</h4>
+					<p>{{ .description }}</p>
+										<p>{{ .date }}</p>
+										<a href="{{.event_link}}"></a>
+				</div>
 			{{ end }}
 		</div>
 
 		{{ partial "contact-form" . }}
+
+		<div class="flex-ns mb3">
+			 {{ range .Params.contact_entries }}
+				<div>
+					<h4 class="f4 b lh-title mb2 primary">{{ .heading }}</h4>
+					<p>{{ .text }}</p>
+				</div>
+			{{ end }}
+		</div>
 
 	</div>
 </div>
