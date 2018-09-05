@@ -26,7 +26,7 @@ if (process.env.DEBUG) {
 gulp.task("hugo", (cb) => buildSite(cb));
 gulp.task("hugo-preview", (cb) => buildSite(cb, ["--buildDrafts", "--buildFuture"]));
 gulp.task("build", ["css", "js", "cms-assets", "hugo", "resize-people-images"]);
-gulp.task("build-preview", ["css", "js", "cms-assets", "hugo-preview"]);
+gulp.task("build-preview", ["css", "js", "cms-assets", "hugo-preview", "resize-people-images"]);
 
 const stripDir = function(p) { p.dirname = ""; };
 

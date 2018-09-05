@@ -3,19 +3,16 @@
 <section id="videos" class="center pt4 pb2 mw7">
   <h2 class="f2 b lh-title mb2 ">Videos</h2>
   <article class="mhn1-l ph3 cf">
-  {{ with .Site.GetPage "section" "videos" }}
+    {{ with .Site.GetPage "section" "videos" }}
+    {{ range $index, $element := .Params.youtube}}
 
+    <div class="fl w-100 w-50-ns pa1 ">
 
-  {{ range $index, $element := .Params.youtube}}
+      {{ partial "youtube" (dict "id" $element.id )}}
 
-  <div class="fl w-100 w-50-ns pa1 ">
-
-  {{ partial "youtube" (dict "id" $element.id )}}
-
-  </div>
-  {{ end }}
-  {{ end }}
-</article>
+    </div>
+    {{ end }} {{ end }}
+  </article>
 </section>
 
 

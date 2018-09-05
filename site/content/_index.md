@@ -1,8 +1,8 @@
 ---
+image: '/img/logos/EC_logo.png'
 title: "Evaluation Center"
 subtitle: at Northwestern University
-logo: /img/logos/EC_logo.png
-image:
+
 blurb:
     heading: About
     text: The Center for the Evaluation of HIV Prevention Programs in Chicago is a collaborative effort between the Evaluation, Data Integration, and Technical Assistance Program, the Center for Prevention Implementation Methodology at Northwestern University, and the AIDS Foundation of Chicago.

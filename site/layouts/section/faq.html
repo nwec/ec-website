@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-{{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title) }}
+{{/* {{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title) }} */}}
 <!-- {{ printf "%#v" .Params }} -->
 <div class="mw7 center ph3 pt4">
 
@@ -8,7 +8,6 @@
   <!-- {{ printf "%#v" $element }} -->
   {{ partial "faq-card" (dict "question" $element.question "answer" $element.answer )}}
   {{ end }}
-
 </div>
 
 {{ end }}

@@ -1,14 +1,17 @@
-{{ define "main" }}
-
-{{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title) }}
+{{ define "main" }} {{/* {{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title) }} */}}
 <!-- {{ printf "%#v" .Params }} -->
 <div class="mw7 center ph3 pt4">
-
-  {{ range $index, $element := .Params.people }}
-  <!-- {{ printf "%#v" $element }} -->
-  {{ partial "team-card-horizontal" (dict "name" $element.name "role1" $element.role1 "role2" $element.role2 "text" $element.text "image" $element.imageUrl)}}
-  {{ end }}
-
+  <div class="mhn1-l ph3 cf">
+    {{ with .Site.GetPage "section" "people" }}
+    <!-- {{ printf "%#v" .Params.people }} -->
+    {{ range $index, $element := .Params.people}}
+    <!-- {{ printf "%#v" $element }} -->
+    <div class="fl w-100 w-50-ns pa1">
+      {{ partial "team-card-horizontal" (dict "name" $element.name "role1" $element.role1 "role2" $element.role2 "text" $element.text "image" $element.imageUrl)}}
+    </div>
+    {{ end }}
+    {{ end }}
+  </div>
 </div>
 
 {{ end }}

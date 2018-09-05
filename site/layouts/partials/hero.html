@@ -1,7 +1,13 @@
+{{/* wraps over jumbotron */}}
 <section id="cover">
 <div class="cover bg-info white pa3">
   <div class="mw-5 mw7-ns center tc">
-    {{ partial "jumbotron" (dict "logoUrl" .Site.Params.logoUrl "title" .Site.Params.title "subtitle" .Site.Params.subtitle) }}
+    {{ if .Page.Params.image }}
+    {{/* put logo here, off to the side maybe? */}}
+    {{ partial "jumbotron" (dict "image" .Page.Params.image "title" .Page.Params.title "subtitle" .Page.Params.subtitle) }}
+    {{ else }}
+    {{ partial "jumbotron" (dict "image" .Site.Params.logoUrl "title" .Page.Params.title "subtitle" .Page.Params.subtitle) }}
+    {{ end }}
   </div>
 </div>
 </section>

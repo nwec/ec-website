@@ -2,8 +2,12 @@
 <html lang="en">
   {{ partial "head" . }}
   <body class="sans-serif">
-    <!-- {{ partial "nav" . }} -->
+
     {{ partial "hero" .}}
+    <section id="navbar" class="z-4 shadow-5">
+    {{ partial "nav" . }}
+    </section>
+    <!-- {{ partial "breadcrumb" . }} -->
     {{ block "main" . }}{{ end }}
     {{ partial "footer" . }}
   </body>
