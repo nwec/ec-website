@@ -54,6 +54,23 @@ collections: # A list of collections the CMS should be able to edit
               - label: Text
                 name: text
                 widget: text
+          - label: Upcoming Events
+            name: events
+            widget: list
+            fields:
+              - label: Heading
+                name: heading
+                widget: string
+              - label: Date
+                name: date
+                widget: date
+                default: ""
+              - label: Description
+                name: description
+                widget: text
+              - label: Link
+                name: event_link
+                widget: string
       - file: "site/content/projects/_index.md"
         label: "projects Page"
         name: "projects"
