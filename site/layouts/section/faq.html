@@ -6,7 +6,7 @@
 
   {{ range $index, $element := .Params.questions }}
   <!-- {{ printf "%#v" $element }} -->
-  {{ partial "faq-card" (dict "question" $element.question "answer" $element.answer )}}
+  {{ partial "faq-cordian" (dict "question" $element.question "answer" $element.answer )}}
   {{ end }}
 </div>
 

@@ -41,13 +41,13 @@
   <!-- {{ printf "%#v" .Params.people }} -->
   {{ range $index, $element := .Params.questions}}
   <!-- {{ printf "%#v" $element }} -->
-  <div class="fl w-100 w-50-ns pa1">
-  {{ partial "faq-card" (dict "question" $element.question "answer" $element.answer )}}
-  </div>
+  {{/* <div class="fl w-100 w-50-ns pa1"> */}}
+  {{/* {{ partial "faq-card" (dict "question" $element.question "answer" $element.answer )}} */}}
+  {{ partial "faq-cordian" (dict "question" $element.question "answer" $element.answer )}}
+
+  {{/* </div> */}}
   {{ end }}
   {{ end }}
-</section>
-</div>
 
 
 
