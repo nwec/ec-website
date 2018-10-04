@@ -14,6 +14,7 @@ questions:
       Here's a very short answer .....
 
       Here is a guide (link
+    file: /img/faq-test.pdf
     question: How do i de-identify data?
   - answer: BECAUSE IT IS ... read why
     question: Why is it important to specifically think about SGM folks in evaluation?
