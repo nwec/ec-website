@@ -8,6 +8,7 @@ questions:
 
       Read more here (i would want a link under the word here to the full page
       resource)
+    file: /img/faq-test.pdf
     question: How do I ask SOGI questions in my evaluation?
   - answer: |-
       Here's a very short answer .....
