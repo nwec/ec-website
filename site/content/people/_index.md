@@ -11,6 +11,14 @@ people:
       conducting HIV research focusing on understanding social-, sexual-, and
       network-level factors that drive health disparities among men who have sex
       with men, particularly young MSM and Black MSM.
+  - imageUrl: /img/resized/lauren.png
+    name: 'Lauren B Beach, JD/PhD'
+    role1: Postdoctoral Scholar
+    text: >
+      Dr. Beach is a trained lawyer and molecular biologist who brings
+      experience leading research and evaluations on how stigma affects chronic
+      disease management and health outcomes in sexual and gender minority
+      populations.
   - imageUrl: /img/resized/george.png
     name: 'George J Greene, PhD'
     role1: Associate Director of the EDIT Program
@@ -27,14 +35,6 @@ people:
       Dr. Johnson is a trained mixed methods program evaluator with a background
       in social work. Her interest lies in applied HIV and STI prevention and
       care intervention research.
-  - imageUrl: /img/resized/lauren.png
-    name: 'Lauren B Beach, JD/PhD'
-    role1: Postdoctoral Scholar
-    text: >
-      Dr. Beach is a trained lawyer and molecular biologist who brings
-      experience leading research and evaluations on how stigma affects chronic
-      disease management and health outcomes in sexual and gender minority
-      populations.
   - imageUrl: /img/resized/peter-lindeman.jpg
     name: 'Peter Lindeman, MA'
     role1: Project Coordinator
@@ -50,12 +50,6 @@ people:
       Emma was trained in Public Health and has experience conducting program
       evaluation in diverse settings. Her primary interests include HIV
       prevention and adolescent reproductive health.
-  - imageUrl: /img/resized/christian-adames.jpg
-    name: Christian Adames
-    role1: Data Assistant Associate
-    text: |+
-
-
   - imageUrl: /img/resized/emily-bettin.jpg
     name: Emily Bettin
     role1: Research Study Coordinator
@@ -69,6 +63,6 @@ people:
   - imageUrl: /img/resized/rachel-marro.jpg
     name: Rachel Marro
     role1: Data Assistant Associate
-    text: |+
+    text: ''
 ---
 
