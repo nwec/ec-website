@@ -71,4 +71,3 @@ people:
     role1: Data Assistant Associate
     text: |+
 ---
-

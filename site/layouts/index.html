@@ -2,54 +2,53 @@
 
 
 
-
 {{/* <section id="navbar" class="z-4 shadow-5">
 {{ partial "nav" . }}
 </section> */}}
-<section id="about">
-  {{ partial "short-text" .Params.blurb }}
-</section>
+<section id="about" class="mv4">
+  {{ with .Site.GetPage "/about"  }}
+  {{ partial "short-text" .Params.about }}
+  {{ partial "2-up" .Params.extra }}
+  {{end}}
 
+</section>
 
 <section id="projects">
+  {{ with .Site.GetPage "/projects"  }}
+    {{/* {{ printf "%#v" .Params }} */}}
    {{ partial "2-up" .Params.intro }}
+   {{end}}
 </section>
 
 
-
+{{/* rolemodel for summary of sections */}}
 <section id="team" class="center pt4 pb2 mw7">
   <div class="mhn1-l ph3 cf">
     <h2 class="f2 b lh-title mb2">Our Team</h2>
-    {{ with .Site.GetPage "section" "people" }}
-    <!-- {{ printf "%#v" .Params.people }} -->
-    {{ range $index, $element := .Params.people}}
-    <!-- {{ printf "%#v" $element }} -->
+    {{ with .Site.GetPage "/about/people" }}
+    {{/* number of items to show  */}}
+    {{ range first 2 .Params.people }}
+    {{/* {{ printf "%#v" . }} */}}
     <div class="fl w-100 w-50-ns pa1">
-    {{ partial "team-card-horizontal" (dict "name" $element.name "role1" $element.role1 "role2" $element.role2 "text" $element.text "image" $element.imageUrl)}}
-  </div>
+    {{ partial "team-card-horizontal" (dict "name" .name "role1" .role1 "role2" .role2 "text" .text "image" .imageUrl)}}
+    </div>
     {{ end }}
-    {{ end }}
+    <a href="./{{.Section}}" class="btn shadow-3 grow" >More {{ .Section}}</a>
 
+    {{ end }}
   </div>
 </section>
 
 <div class="bg-success mhn1-l ph3 ">
 <section id="faq" class="center pt4 pb2 mw7 mhn1-l ph3 cf">
-
 <h2 class="f2 b lh-title mb2 white">Frequently Asked Questions</h2>
-  {{ with .Site.GetPage "section" "faq" }}
-  <!-- {{ printf "%#v" .Params.people }} -->
-  {{ range $index, $element := .Params.questions}}
-  <!-- {{ printf "%#v" $element }} -->
-  {{/* <div class="fl w-100 w-50-ns pa1"> */}}
-  {{/* {{ partial "faq-card" (dict "question" $element.question "answer" $element.answer )}} */}}
-  {{ partial "faq-cordian" (dict "question" $element.question "answer" $element.answer )}}
-
-  {{/* </div> */}}
+  {{ with .Site.GetPage "/faq" }}
+  {{ range first 2 .Params.questions }}
+  {{ partial "faq-cordian" (dict "question" .question "answer" .answer )}}
   {{ end }}
+  <a href="./{{.Section}}" class="btn shadow-3 grow" >More {{ upper .Section}}</a>
   {{ end }}
-
-
+</div>
 
 <section id="videos" class="center pt4 pb2 mw7 mhn1-l ph3 ">
   <h2 class="f2 b lh-title mb2 ">Videos</h2>
@@ -73,7 +72,7 @@
 
 
 
-<div class="bg-info white">
+<div class="bg-info white br4">
 
   <section id="contact" class="center cf pt4 pb2 mw8 center">
   <div class="mhn1-l ph3 center mw7">

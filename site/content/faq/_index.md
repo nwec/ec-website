@@ -19,4 +19,3 @@ questions:
   - answer: Use the CMS or commit directly!
     question: How do I add to this?
 ---
-
