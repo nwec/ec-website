@@ -1,6 +1,8 @@
 baseurl = "/"
 languageCode = "en-us"
 title = "Homepage"
+publishDir = "../dist"
+assetDir = "../src"
 
 [params]
   org = "Evaluation Center"
