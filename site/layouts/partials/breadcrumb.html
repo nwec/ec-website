@@ -1,4 +1,4 @@
-<nav id="breadcrumb-nav" class="center pv1 z-4">
+<nav id="breadcrumb-nav" class="z-4">
   {{ template "breadcrumbnav" (dict "p1" . "p2" .) }}
 </nav>
 {{ define "breadcrumbnav" }}
@@ -9,10 +9,13 @@
 {{ end }}
 
 <span{{ if eq .p1 .p2 }} class="active"{{ end }}>
+
 {{ if eq .p1.Kind "home"}}
-    <a href="{{ .p1.Permalink }}" class="growph4-l ph3 no-underline dib f6 f5-l dib mr3 mr4-l">Home</a>
+    <a href="{{ .p1.Permalink }}" class="grow no-underline dib f6 f5-l">Home /</a>
 {{ else }}
-  <a href="{{ .p1.Permalink }}" class="growph4-l ph3 no-underline dib f6 f5-l dib mr3 mr4-l">{{ .p1.Title }}</a>
+  <a href="{{ .p1.Permalink }}" class="grow  no-underline dib f6 f5-l">{{ .p1.Title }} / </a>
+
 {{end}}
+
 </span>
 {{ end }}

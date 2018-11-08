@@ -1,16 +1,24 @@
 {{ define "main" }}
   <main>
       {{ .Content }}
-
+          I am a section
           <ul class="contents">
-          {{ range .Paginator.Pages }}
-              <li>{{.Title}}
-                  <div>
-                    {{ partial "summary.html" . }}
-                  </div>
-              </li>
-          {{ end }}
+            {{ template "_internal/pagination.html" . }}
+            {{ range .Paginator.Pages }}
+              <div class="post">
+                <h2 class="post__title">
+                  <a href="{{ .Permalink }}">{{ .Title }}</a>
+                </h2>
+                <div class="post__summary">
+                  {{ .Summary }}
+                </div>
+              </div>
+            {{ end }}
+            {{ range .Sections }}
+
+            {{/* {{ printf "%#v" . }} */}}
+            {{ end }}
           </ul>
-      {{ partial "pagination.html" . }}
+      paginate
   </main>
 {{ end }}
