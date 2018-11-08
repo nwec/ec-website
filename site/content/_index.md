@@ -1,6 +1,6 @@
 ---
 image: '/img/logos/EC_logo.png'
-title: "Evaluation Center"
+title: Home
 subtitle: at Northwestern University
 
 ---
