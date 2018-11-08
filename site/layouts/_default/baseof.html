@@ -5,11 +5,11 @@
 
     {{ partial "hero" .}}
     <section id="navbar" class="z-4 ">
-    {{ partial "nav" . }}
+    <!-- {{ partial "nav" . }} -->
+    {{ partial "dynamic-menu" . }}
 
     <nav id="nav" class="z-4 bg-white shadow-5">
-    <!-- {{ partial "dynamic-menu" . }} -->
-        <!-- {{ partial "sidebar" . }} -->
+
     {{ partial "breadcrumb" . }}
   </nav>
       </section>
