@@ -5,12 +5,13 @@
 	--port-gore:	#1c1a4c;
 	--tussock:	#be8e3a;
 	--pomegranate:	#f44336;
+  --pomegranate-dark:	#a12a22;
 
 	--primary:             var(--mariner);
 	--success:             var(--ocean-green);
 	--info:                var(--port-gore);
 	--warning:             var(--tussock);
-	--danger:              var(--pomegranate);
+	--danger:              var(--pomegranate-dark);
 
 	}
 

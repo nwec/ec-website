@@ -3,18 +3,13 @@
   {{ partial "head" . }}
 
     {{ partial "hero" .}}
-    <section id="navbar" class="z-4 ">
-    <!-- {{ partial "nav" . }} -->
 
     {{ partial "dynamic-menu" . }}
-          </section>
-    <nav id="nav" class="z-4 bg-white shadow-5">
-
-    {{ partial "breadcrumb" . }}
-  </nav>
-
-    <body>
+    <!-- {{ partial "breadcrumb" . }} -->
+    <body class="bg-warm-white">
     {{ block "main" . }}{{ end }}
+    <div class="bg-warning">
     {{ partial "footer" . }}
+  </div>
   </body>
 </html>

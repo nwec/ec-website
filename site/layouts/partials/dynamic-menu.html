@@ -1,7 +1,7 @@
-<nav class="dynamic-nav bg-warning white tc center pv1 z-4">
+<nav id="navbar" class="dynamic-nav bg-info white tc center pv1 z-4  br--bottom  shadow-5">
 {{ $currentPage := . }}
-<a href="/" class="growph4-l ph3 no-underline dib f6 f5-l dib mr3 mr4-l">Home</a>
+<a href="/" class="growph4-l ph3 no-underline dib f6 f5-l dib mr3 mr4-l bg-animate hover-bg-blue br-pill">Home</a>
 {{ range .Site.Menus.main }}
-<a class="dynamic-nav-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}} growph4-l ph3 no-underline dib f6 f5-l dib mr3 mr4-l" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+<a class="dynamic-nav-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}} growph4-l ph3 no-underline dib f6 f5-l dib mr3 mr4-l bg-animate hover-bg-blue br-100 br--bottom" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
 {{ end }}
 </nav>
