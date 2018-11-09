@@ -1,18 +1,17 @@
 {{ define "main" }}
   <main>
-      {{ .Content }}
-          default section
+          {{/* {{ printf "%#v"  .Params}} */}}
+
+          <h1> In this section </h1>
           <ul class="contents">
             {{ template "_internal/pagination.html" . }}
             {{ range .Paginator.Pages }}
-              {{ printf "%#v"  .File.BaseFileName}}
+              {{/* {{ printf "%#v"  .File.BaseFileName}}
+              {{ printf "%#v"  .Params}} */}}
               <div class="post">
                 <h2 class="post__title">
                   <a href="{{ .Permalink }}">{{ .Title }}</a>
                 </h2>
-                <div class="post__summary">
-                  {{ .Summary }}
-                </div>
               </div>
             {{ end }}
             {{ range .Sections }}

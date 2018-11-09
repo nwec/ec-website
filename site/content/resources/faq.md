@@ -1,5 +1,7 @@
 ---
 title: Questions & Answers
+type: faq
+description: ask questions, get answers, see questions and answers
 questions:
   - answer: >-
       These questions are best:

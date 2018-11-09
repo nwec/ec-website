@@ -1,23 +1,24 @@
 ---
 title: Publications
-questions:
-  - answer: >-
-      These questions are best:
-
-      ...
-
-      Read more here (i would want a link under the word here to the full page
-      resource)
-    file: /img/faq-test.pdf
-    question: How do I ask SOGI questions in my evaluation?
-  - answer: |-
-      Here's a very short answer .....
-
-      Here is a guide (link
-    file: /img/faq-test.pdf
-    question: How do i de-identify data?
-  - answer: BECAUSE IT IS ... read why
-    question: Why is it important to specifically think about SGM folks in evaluation?
-  - answer: Use the CMS or commit directly!
-    question: How do I add to this?
+type: publications
+description: Published work
+publications:
+  - fileURL:
+    heading: 'Cool Paper'
+    authors: Great Authors
+    date: 2017-03-03
+    description: >
+      Dr. Phillips is a trained epidemiologist who brings years of experience
+      conducting HIV research focusing on understanding social-, sexual-, and
+      network-level factors that drive health disparities among men who have sex
+      with men, particularly young MSM and Black MSM.
+  - fileURL:
+    heading: 'Cool Paper'
+    authors: Great Authors
+    date: 2017-03-03
+    description: >
+      Dr. Phillips is a trained epidemiologist who brings years of experience
+      conducting HIV research focusing on understanding social-, sexual-, and
+      network-level factors that drive health disparities among men who have sex
+      with men, particularly young MSM and Black MSM.
 ---

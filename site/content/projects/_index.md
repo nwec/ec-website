@@ -4,17 +4,12 @@ heading: Some past Projects
 weight: 3
 description: these were great
 image: 'https://picsum.photos/400/400?random'
-testimonials:
-  - author: Person
-    quote: This stuff is great
-  - author: Other Person
-    quote: Go for it!
 full_image: 'https://picsum.photos/200/300?random'
 
 projects:
   - image: 'https://picsum.photos/200/300?random'
     heading: Comprehensive HIV Prevention Projects
-    text: >-
+    description: >-
 
       The Evaluation Center oversees the evaluation efforts and serves as a
       capacity-building entity for 20 HIV prevention demonstration projects
@@ -26,9 +21,14 @@ projects:
       qualitative analysis of implementation challenges and successes,
       quarterly capacity-building webinars, and analysis of surveillance data
       to assess impact on HIV incidence over time.
+    testimonials:
+      - author: Person
+        quote: This stuff is great
+      - author: Other Person
+        quote: Go for it!
   - image: 'https://picsum.photos/200/300?random'
     heading: Project PrIDE
-    text: >-
+    description: >-
       To build upon the success of the Center for the Evaluation of HIV
       Prevention Programs in Chicago (Evaluation Center), the EDIT Program‘s
       Evaluation Center Extension was funded to to evaluate PrEP demonstration
@@ -43,7 +43,7 @@ projects:
       including organizational network analyses.
   - image: 'https://picsum.photos/200/300?random'
     heading: EDIT CARES
-    text: >-
+    description: >-
       Traditionally, most of EDIT’s work with community agencies is funded
       through entities like the Chicago Department of Public Health, primarily
       centered on HIV prevention and care. We recognized that this limits the
@@ -56,7 +56,7 @@ projects:
       technical assistance services.
   - image: 'https://picsum.photos/200/300?random'
     heading: Be Heard
-    text:
+    description:
       Often transgender and gender-nonconforming persons change their voice in
       order to better represent their gender identity. However, many do so
       without any vocal training and thus risk harming their voice. As a

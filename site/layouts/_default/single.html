@@ -1,5 +1,4 @@
 {{ define "main" }}
-i am default single
-{{ .Params }}
-{{ .Content }}
+
+{{ partial "generics/frontmatter-loop" . }}
 {{ end }}
