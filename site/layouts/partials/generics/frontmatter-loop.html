@@ -1,0 +1,4 @@
+{{ range $key, $value := .Params  }}
+  <li>{{$key}} , {{$value}} </li>
+  {{ (index $key 1) }}
+ {{ end }}

@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   {{ partial "head" . }}
-  <body class="sans-serif">
 
     {{ partial "hero" .}}
     <section id="navbar" class="z-4 ">
     <!-- {{ partial "nav" . }} -->
+
     {{ partial "dynamic-menu" . }}
-    {{ partial "sidebar" . }}
+          </section>
     <nav id="nav" class="z-4 bg-white shadow-5">
 
     {{ partial "breadcrumb" . }}
   </nav>
-      </section>
+
     <body>
     {{ block "main" . }}{{ end }}
     {{ partial "footer" . }}
-  </body>
   </body>
 </html>

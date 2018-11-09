@@ -1,5 +1,6 @@
 ---
 title: About
+weight: 1
 about:
     heading: About
     text: The Center for the Evaluation of HIV Prevention Programs in Chicago is a collaborative effort between the Evaluation, Data Integration, and Technical Assistance Program, the Center for Prevention Implementation Methodology at Northwestern University, and the AIDS Foundation of Chicago.

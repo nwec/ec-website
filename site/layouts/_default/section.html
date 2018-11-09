@@ -1,10 +1,11 @@
 {{ define "main" }}
   <main>
       {{ .Content }}
-          I am a section
+          default section
           <ul class="contents">
             {{ template "_internal/pagination.html" . }}
             {{ range .Paginator.Pages }}
+              {{ printf "%#v"  .File.BaseFileName}}
               <div class="post">
                 <h2 class="post__title">
                   <a href="{{ .Permalink }}">{{ .Title }}</a>
@@ -19,6 +20,5 @@
             {{/* {{ printf "%#v" . }} */}}
             {{ end }}
           </ul>
-      paginate
   </main>
 {{ end }}

@@ -1,6 +1,5 @@
 ---
-title: Resources
-weight: 5
+title: Publications
 questions:
   - answer: >-
       These questions are best:

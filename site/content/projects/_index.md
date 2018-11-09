@@ -1,6 +1,7 @@
 ---
 title: Projects
 heading: Some past Projects
+weight: 3
 description: these were great
 image: 'https://picsum.photos/400/400?random'
 testimonials:

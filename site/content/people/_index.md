@@ -1,6 +1,8 @@
 ---
 title: Our Team
+type: people
 image: /img/group-eval-center.jpg
+weight: 1
 people:
   - imageUrl: /img/resized/gregory.png
     name: 'Gregory Phillips, PhD'

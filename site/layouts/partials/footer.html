@@ -1,13 +1,12 @@
-<footer class="bg-info ph3 pv4 white">
+<footer class="bg-info white">
 
-	<div class="mw7 center pt3">
+	<div class="mw8 center pt3">
 
-		<div class=" center mb4 tc">
-
-			<img src={{ string .Site.Params.logoUrl }}  alt="logo" class="db w4 center mb4 br0">
+		<div class="tl">
+			<img src={{ string .Site.Params.logoUrl }}  alt="logo" class="dib w3 center br0">
 			<!-- <p class="f3 lh-title light-gray b tc mb2">Newsletter subscribe</p> -->
 			<!-- <p>Get awesome news from us in your inbox every two weeks. Be the first to learn about new projects.</p> -->
-			<div class="f3 lh-subheading"> {{ .Site.Params.org }} </div>
+			<div class="f4 lh-subheading"> {{ .Site.Params.org }} </div>
 			{{/* {{ partial "newsletter-form" . }} */}}
 
 		<!-- </div> -->
@@ -49,11 +48,5 @@
 	</div>
 
 </footer>
-
 {{ partial "svg" . }}
-
 <script src="/app.js"></script>
-
-</body>
-
-</html>

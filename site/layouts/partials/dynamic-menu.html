@@ -1,5 +1,6 @@
 <nav class="dynamic-nav bg-warning white tc center pv1 z-4">
 {{ $currentPage := . }}
+<a href="/" class="growph4-l ph3 no-underline dib f6 f5-l dib mr3 mr4-l">Home</a>
 {{ range .Site.Menus.main }}
 <a class="dynamic-nav-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}} growph4-l ph3 no-underline dib f6 f5-l dib mr3 mr4-l" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
 {{ end }}

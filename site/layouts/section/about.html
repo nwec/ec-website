@@ -1,0 +1,31 @@
+{{ define "main" }}
+
+{{/* {{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title) }} */}}
+<div class="mw7 center ph3 pt4">
+
+  {{ partial "short-text" .Params.about }}
+  {{ partial "short-text" .Params.extra }}
+  {{ with .Site.GetPage "/about/values" }}
+  <div class="mw7 center ph3 pt4">
+    <h2 class="f2 b lh-title w-40-l">{{.Title}}</h2>
+    {{ range $index, $element := .Params.values }}
+      {{ if modBool $index 2 }}
+        {{ partial "media-block" $element }}
+      {{ else }}
+        {{ partial "media-block-reverse" $element }}
+      {{ end }}
+    {{ end }}
+
+  </div>
+  {{end }}
+  {{/* {{ range $index, $element := .Params }}
+    {{ if modBool $index 2 }}
+      {{ partial "media-block" $element }}
+    {{ else }}
+      {{ partial "media-block-reverse" $element }}
+    {{ end }}
+  {{ end }} */}}
+
+</div>
+
+{{ end }}

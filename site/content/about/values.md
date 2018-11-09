@@ -1,6 +1,9 @@
 ---
 title: Our Evaluation Approach
 image: 'https://picsum.photos/200/300'
+weight: 2
+draft: false
+
 values:
   - heading: Empowerment
     imageUrl: 'https://picsum.photos/200/300'
@@ -64,4 +67,3 @@ values:
       Nostrud culpa non anim est consectetur labore culpa. Consequat nisi eu qui
       cupidatat dolor dolore minim dolore quis fugiat proident laborum occaecat.
 ---
-

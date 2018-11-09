@@ -1,0 +1,3 @@
+{{ range (.Site.GetPage "section" .Section).Sections  }}
+<li><a href="{{ .Permalink }}">{{ .Title | upper }}</a></li>
+{{end}}
