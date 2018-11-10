@@ -1,0 +1,18 @@
+    <article class="dib w-100 w-50-m  w-25-ns pa2-ns bg-warm-white shadow-3">
+       <div class="aspect-ratio aspect-ratio--1x1">
+         <img style="background-image:url(http://mrmrs.github.io/images/0006.jpg);"
+         class="db bg-center cover aspect-ratio--object z-2" />
+       </div>
+       <a href="{{.link}}" class="ph2 ph0-ns pb3 link db">
+         <dl class="">
+           <h2 class="f2 b lh-title w-40-l">{{.heading | default "heading"}}</h2>
+           <h3 class="f6 fw4 black-60">{{.subheading | default "subheading"}}</h3>
+           <dt class="clip">Date</dt>
+           <dd class="ml0">{{.date | default "date"}}</dd>
+           <div class="mt2 f6 ws-normal">
+             <p class="overflow">
+               {{ .description | default "Lorem ipsum dolor sit amet, consetetur sadipscing elitr" }}
+             </p>
+           </dl>
+       </a>
+     </article>
