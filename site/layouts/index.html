@@ -3,17 +3,48 @@
   {{ with .Site.GetPage "/about"  }}
   <section id="{{anchorize .Title }}" class="br-100 bg-warm-white br--bottom br--left ">
 
-   {{ partial "generics/section-layout" (dict "title" .Title "link" .Permalink "p1" .Params.about.text "action0" "/values" "action0desc" "Learn more about our approach" "action1" "/people" "action1desc" "Meet the Team" "bgColor" "bg-warm-white" "orient" "right")}}
+   {{ partial "generics/section-layout" (dict "title" .Title "link" .Permalink "p1" .Params.about.text "action0" "about/values" "action0desc" "Learn more about our approach" "action1" "/people" "action1desc" "Meet the Team" "bgColor" "bg-warm-white" "orient" "right")}}
 
 
    {{ partial "generics/section-layout" (dict "title" .Params.extra.heading "link" "/projects" "p1" .Params.extra.text "action0" "/projects" "action0desc" "See our projects" "bgColor" "bg-success" "orient" "right")}}
 
   {{ end }}
   </section>
+
+  <section id="team" class="center pt4 pb2 mw7">
+  <div class="mhn1-l ph3 cf">
+    <h2 class="f2 b lh-title mb2">Our Team</h2>
+    {{ with .Site.GetPage "/people" }}
+    {{/* number of items to show  */}}
+    {{ range first 2 .Params.people }}
+    {{/* {{ printf "%#v" . }} */}}
+    <div class="fl w-100 w-50-ns pa1">
+    {{ partial "team-card-horizontal" (dict "name" .name "role1" .role1 "role2" .role2 "text" .text "image" .imageUrl)}}
+    </div>
+    {{ end }}
+    <a href="./{{.Section}}" class="btn shadow-3 grow" >More {{ .Section}}</a>
+    {{ end }}
+  </div>
+</section>
+
   {{ with .Site.GetPage "/resources"  }}
   <section id="{{anchorize .Title }}" class="br-pill ">
 
+
+
    {{ partial "generics/section-layout" (dict "title" .Title "link" .Permalink "p1" .Params.about.text "action0" "/publications" "action0desc" "Publications" "action1" "/faq" "action1desc" "Question & Answers" "action2" "/videos" "action2desc" "Videos" "bgColor" "bg-warm-white")}}
+
+   <div class="bg-success br-pill br--right">
+   <section id="faq" class="center pt4 pb2 mw7 mhn1-l ph3 cf">
+   <h2 class="f2 b lh-title mb2 white">Frequently Asked Questions</h2>
+     {{ with .Site.GetPage "/faq" }}
+     {{ range first 2 .Params.questions }}
+     {{ partial "faq-cordian" (dict "question" .question "answer" .answer )}}
+     {{ end }}
+     <a href="./{{.Section}}" class="btn shadow-3 grow" >More {{ .Section}}</a>
+     {{ end }}
+   </div>
+ </section>
    {{/* {{ partial "generics/section-layout" (dict "title" .Params.extra.heading "link" "/projects" "p1" .Params.extra.text "action0" "/projects" "action0desc" "See our projects" "bgColor" "bg-success")}} */}}
   </section>
   {{ end }}
