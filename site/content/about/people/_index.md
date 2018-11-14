@@ -1,6 +1,6 @@
 ---
 title: Our Team
-type: people
+layout: people
 image: /img/group-eval-center.jpg
 weight: 1
 people:

@@ -1,5 +1,7 @@
 ---
 title: Our Evaluation Approach
+layout: values
+type: section
 image: 'https://picsum.photos/200/300'
 weight: 2
 draft: false
