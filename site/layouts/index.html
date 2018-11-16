@@ -1,17 +1,19 @@
 {{ define "main" }}
 
-  {{ with .Site.GetPage "/about"  }}
-  <section id="{{anchorize .Title }}" class="br-100 bg-warm-white br--bottom br--left ">
+{{ with .Site.GetPage "/about"  }}
+<section id="{{anchorize .Title }}">
 
-   {{ partial "generics/section-layout" (dict "title" .Title "link" .Permalink "p1" .Params.about.text "action0" "about/values" "action0desc" "Learn more about our approach" "action1" "/people" "action1desc" "Meet the Team" "bgColor" "bg-warm-white" "orient" "right")}}
+  {{ partial "generics/section-layout" (dict "title" .Title "link" .Permalink "p1" .Params.about.text "action0" "about/values" "action0desc" "Learn more about our approach" "action1" "#team" "action1desc" "Meet the Team" )}}
+</section>
+<section id="{{anchorize .Title }}">
 
-
-   {{ partial "generics/section-layout" (dict "title" .Params.extra.heading "link" "/projects" "p1" .Params.extra.text "action0" "/projects" "action0desc" "See our projects" "bgColor" "bg-success" "orient" "right")}}
+  {{ partial "generics/section-layout" (dict "title" .Params.extra.heading "link" "/projects" "p1" .Params.extra.text "action0" "/projects" "action0desc" "See our projects" "bgColor" "bg-success" "orient" "right")}}
 
   {{ end }}
-  </section>
+</section>
 
-  <section id="team" class="center pt4 pb2 mw7">
+
+<section id="team" class="center pt4 pb2 mw7">
   <div class="mhn1-l ph3 cf">
     <h2 class="f2 b lh-title mb2">Our Team</h2>
     {{ with .Site.GetPage "about/people" }}
@@ -19,7 +21,7 @@
     {{ range first 2 .Params.people }}
     {{/* {{ printf "%#v" . }} */}}
     <div class="fl w-100 w-50-ns pa1">
-    {{ partial "team-card-horizontal" (dict "name" .name "role1" .role1 "role2" .role2 "text" .text "image" .imageUrl)}}
+      {{ partial "team-card-horizontal" (dict "name" .name "role1" .role1 "role2" .role2 "text" .text "image" .imageUrl)}}
     </div>
     {{ end }}
     {{/* <a href="./{{.Section}}" class="btn shadow-3 grow" >More {{ .Section}}</a> */}}
@@ -29,119 +31,36 @@
 
 </section>
 
+{{ with .Site.GetPage "/resources"  }}
+<section id="{{anchorize .Title }}" class="bg-success">
+  {{ partial "generics/section-layout" (dict "title" .Title "link" .Permalink "p1" .Params.about.text "action0" "/publications" "action0desc" "Publications" "action1" "/faq" "action1desc" "Question & Answers" "action2" "/videos" "action2desc" "Videos" "bgColor" "bg-warm-white")}}
 
+  <section id="faq" class="center pt4 pb2 mw7 mhn1-l ph3 cf">
+    <h2 class="f2 b lh-title mb2 white">Frequently Asked Questions</h2>
+    {{ with .Site.GetPage "/faq" }}
+    {{ range first 2 .Params.questions }}
+    {{ partial "faq-cordian" (dict "question" .question "answer" .answer )}}
+    {{ end }}
+    {{ partial "generics/button" (dict "action" .URL "action_desc" "More Q&A" ) }}
+    {{ end }}
 
-  {{ with .Site.GetPage "/resources"  }}
-  <section id="{{anchorize .Title }}" class="br-pill ">
-
-
-
-   {{ partial "generics/section-layout" (dict "title" .Title "link" .Permalink "p1" .Params.about.text "action0" "/publications" "action0desc" "Publications" "action1" "/faq" "action1desc" "Question & Answers" "action2" "/videos" "action2desc" "Videos" "bgColor" "bg-warm-white")}}
-
-   <div class="bg-success br-pill br--right">
-   <section id="faq" class="center pt4 pb2 mw7 mhn1-l ph3 cf">
-   <h2 class="f2 b lh-title mb2 white">Frequently Asked Questions</h2>
-     {{ with .Site.GetPage "/faq" }}
-     {{ range first 2 .Params.questions }}
-     {{ partial "faq-cordian" (dict "question" .question "answer" .answer )}}
-     {{ end }}
-     <a href="./{{.Section}}" class="btn shadow-3 grow" >More {{ .Section}}</a>
-     {{ end }}
-   </div>
- </section>
-   {{/* {{ partial "generics/section-layout" (dict "title" .Params.extra.heading "link" "/projects" "p1" .Params.extra.text "action0" "/projects" "action0desc" "See our projects" "bgColor" "bg-success")}} */}}
   </section>
-  {{ end }}
-  {{ with .Site.GetPage "/contact"  }}
-  <section id="{{anchorize .Title }}" class="br-100 br--right bg-primary z-5">
+
+</section>
+{{ end }}
+{{ with .Site.GetPage "/contact"  }}
+<section id="{{anchorize .Title }}" class="bg-warning z-5">
+
   {{ partial "generics/section-layout" (dict "title" .Title "link" .Permalink "p1" (partial "contact-form" . ) "bgColor" "bg-warning" "orient" "left")}}
-
-  </section>
-  {{ end }}
-
-
-
-{{/* rolemodel for summary of sections */}}
-
-<!--
-<section id="about" class="center mw7 mv4">
-  {{ with .Site.GetPage "/about"  }}
-  {{ partial "short-text" .Params.about }}
-  <a href="./about/values" class="btn shadow-3 grow mh3" >Read More</a>
-  {{ partial "2-up" .Params.extra }}
-  <a href="./projects" class="btn shadow-3 grow mh3" >See our projects</a>
-  {{end}}
-</section>
-
-<section id="team" class="center pt4 pb2 mw7">
-  <div class="mhn1-l ph3 cf">
-    <h2 class="f2 b lh-title mb2">Our Team</h2>
-    {{ with .Site.GetPage "/people" }}
-    {{/* number of items to show  */}}
-    {{ range first 2 .Params.people }}
-    {{/* {{ printf "%#v" . }} */}}
-    <div class="fl w-100 w-50-ns pa1">
-    {{ partial "team-card-horizontal" (dict "name" .name "role1" .role1 "role2" .role2 "text" .text "image" .imageUrl)}}
-    </div>
-    {{ end }}
-    <a href="./{{.Section}}" class="btn shadow-3 grow" >More {{ .Section}}</a>
-
-    {{ end }}
+  <div class="mw7 center">
+    {{ partial "subscribe-form" . }}
   </div>
 </section>
+{{ end }}
 
-<div class="bg-success mhn1-l ph3 ">
-<section id="faq" class="center pt4 pb2 mw7 mhn1-l ph3 cf">
-<h2 class="f2 b lh-title mb2 white">Frequently Asked Questions</h2>
-  {{ with .Site.GetPage "/faq" }}
-  {{ range first 2 .Params.questions }}
-  {{ partial "faq-cordian" (dict "question" .question "answer" .answer )}}
-  {{ end }}
-  <a href="./{{.Section}}" class="btn shadow-3 grow" >More {{ upper .Section}}</a>
-  {{ end }}
-</div>
-
-<section id="videos" class="center pt4 pb2 mw7 mhn1-l ph3 ">
-  <h2 class="f2 b lh-title mb2 ">Videos</h2>
-  <article class="mhn1-l ph3 cf">
-  {{ with .Site.GetPage "section" "videos" }}
-
-
-  {{ range $index, $element := .Params.youtube}}
-
-  <div class="fl w-100 w-50-ns pa1 ">
-
-  {{ partial "youtube" (dict "id" $element.id )}}
-
-  </div>
-  {{ end }}
-  {{ end }}
-</article>
-</section>
-
-
-
-
-
-<div class="bg-info white br4">
-
-  <section id="contact" class="center cf pt4 pb2 mw8 center">
-  <div class="mhn1-l ph3 center mw7">
-
-      <h2 class="f2 b lh-title mb2">Contact</h2>
-        {{ partial "subscribe-form" . }}
-
-        {{ partial "contact-form" . }}
-
-
-  </div>
-      </section>
-</div>
--->
-<!--
-<section id="blog">
+{{/* <section id="blog">
 {{ partial "blog" . }}
-</section> -->
+</section> */}}
 
 
 {{ end }}
