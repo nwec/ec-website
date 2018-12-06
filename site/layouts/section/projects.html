@@ -1,8 +1,22 @@
-{{ define "main" }} {{ with .Params }} {{/* {{ printf "%#v" .}} */}} {{ partial "heading-description" . }} {{ end }} {{ with .Params.projects }} {{ partial "4-up" (dict "blurbs" . )}} {{ end }} {{ with .Params.testimonials }}
-<div class="pb4">
-  {{ range . }} {{ partial "blockquote" . }} {{ end }}
-</div>
+{{ define "main" }}
+{{ with .Params }}
+{{ partial "heading-description" . }}
 {{ end }}
+{{ with .Params.projects }}
+
+  {{ range .}}
+  {{ partial "short-text" (dict "heading" .heading "text" .description )}}
+  {{ with .testimonials }}
+  <div class="pb2">
+    {{ range . }}
+    {{ partial "blockquote" . }}
+    {{ end }}
+  </div>
+  {{ end }}
+{{ end }}
+{{ end }}
+
+
 
 <!-- Full-width image -->
 {{/* <img src="{{ .Params.full_image }}" alt="" class="db w-100"> */}} {{ end }}

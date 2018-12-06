@@ -1,18 +1,24 @@
-<nav id="breadcrumb-nav" class="center pv1 z-4">
+<nav id="navbar" class="">
   {{ template "breadcrumbnav" (dict "p1" . "p2" .) }}
+
 </nav>
 {{ define "breadcrumbnav" }}
+
 {{ if .p1.Parent }}
 {{ template "breadcrumbnav" (dict "p1" .p1.Parent "p2" .p2 )  }}
 {{ else if not .p1.IsHome }}
 {{ template "breadcrumbnav" (dict "p1" .p1.Site.Home "p2" .p2 )  }}
 {{ end }}
 
-<span{{ if eq .p1 .p2 }} class="active"{{ end }}>
-{{ if eq .p1.Kind "home"}}
-    <a href="{{ .p1.Permalink }}" class="growph4-l ph3 no-underline dib f6 f5-l dib mr3 mr4-l">Home</a>
+<span {{ if eq .p1 .p2 }} class="active"{{ end }}>
+
+{{ if and (eq .p1.Kind "home") (not (eq .p1 .p2) )}}
+
+  <a href="{{ .p1.Permalink }}" class="grow no-underline di f6 f5-l ma2 ">Home /</a>
 {{ else }}
-  <a href="{{ .p1.Permalink }}" class="growph4-l ph3 no-underline dib f6 f5-l dib mr3 mr4-l">{{ .p1.Title }}</a>
+  <a href="{{ .p1.Permalink }}" class="grow no-underline di f6 f5-l">{{ .p1.Title }} / </a>
+
 {{end}}
+
 </span>
 {{ end }}

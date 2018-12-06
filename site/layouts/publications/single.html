@@ -1,0 +1,17 @@
+{{ define "main" }}
+{{/* potential rolemodel for DRY template component (esp the with context which gives us an index) */}}
+
+{{ with .Params.publications }}
+
+  <div class="nowrap overflow-x-auto overflow-y-auto mw8 center">
+  {{ range $index, $element := .}}
+
+    {{ partial "generics/sidescroll-item" (dict "link" .fileURL "heading" .heading "description" .description "date" .date "subheading" .authors) }}
+
+    {{/* {{ partial "generics/item" (dict "heading" .heading "description" .description "date" .date "subheading" .authors)}} */}}
+
+  {{ end }}
+
+</div>
+{{ end }}
+{{ end }}

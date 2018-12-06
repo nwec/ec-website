@@ -1,0 +1,22 @@
+{{ if .Paginator.Pages }}
+  <h4> In this section: </h4>
+  <ul class="contents">
+    {{ template "_internal/pagination.html" . }}
+    {{ range .Paginator.Pages }}
+      {{/* {{ printf "%#v"  .File.BaseFileName}}
+      {{ printf "%#v"  .Params}} */}}
+      <div class="post">
+        <h2 class="post__title">
+          <a href="{{ .Permalink }}">{{ .Title }}</a>
+        </h2>
+      </div>
+    {{ end }}
+    {{ range .Sections }}
+    <div class="post">
+      <h2 class="post__title">
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+      </h2>
+    </div>
+    {{ end }}
+  </ul>
+  {{end }}

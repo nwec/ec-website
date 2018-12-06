@@ -1,15 +1,22 @@
 {{ define "main" }}
   <main>
-      {{ .Content }}
+          {{ printf "%#v"  .Params}}
+           {{ partial "generics/sidebar-section-nav" . }}
           <ul class="contents">
-          {{ range .Paginator.Pages }}
-              <li>{{.Title}}
-                  <div>
-                    {{ partial "summary.html" . }}
-                  </div>
-              </li>
-          {{ end }}
+            {{ template "_internal/pagination.html" . }}
+            {{ range .Paginator.Pages }}
+              {{ printf "%#v"  .File.BaseFileName}}
+              {{ printf "%#v"  .Params}}
+              <div class="post">
+                <h2 class="post__title">
+                  <a href="{{ .Permalink }}">{{ .Title }}</a>
+                </h2>
+              </div>
+            {{ end }}
+            {{ range .Sections }}
+
+            {{ printf "%#v" .Title }}
+            {{ end }}
           </ul>
-      {{ partial "pagination.html" . }}
   </main>
 {{ end }}
