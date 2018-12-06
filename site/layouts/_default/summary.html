@@ -1,0 +1,14 @@
+<article class="post">
+  <header>
+    <h2><a href='{{ .Permalink }}'> {{ .Title }}</a> </h2>
+  </header>
+
+  {{ range first 4 (index .Params) }}
+    {{ printf "%#v" . }}
+  {{ end }}
+  {{/* {{ partial "short-text" .Params }} */}}
+  {{ .Summary }}
+  <footer>
+  <a href='{{ .Permalink }}'><nobr>Read More →</nobr></a>
+  </footer>
+</article>

@@ -1,14 +1,23 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   {{ partial "head" . }}
-  <body class="sans-serif">
 
     {{ partial "hero" .}}
-    <section id="navbar" class="z-4 shadow-5">
-    {{ partial "nav" . }}
-    </section>
-    <!-- {{ partial "breadcrumb" . }} -->
+
+    {{ partial "dynamic-menu" . }}
+
+
+    <body class="bg-warm-white">
+      <!-- {{ range .Sections }}
+        <li> {{ print .Title }} </li>
+      {{ end }}
+      {{ range .Pages }}
+        <li> {{ print .Title }} </li>
+      {{ end }} -->
+
     {{ block "main" . }}{{ end }}
+    <div class="bg-warning">
     {{ partial "footer" . }}
+  </div>
   </body>
 </html>

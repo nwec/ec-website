@@ -5,10 +5,10 @@ media_folder: "site/static/img" # Folder where user uploaded files should go
 public_folder: "img"
 
 collections: # A list of collections the CMS should be able to edit
-  - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
-    label: "Post" # Used in the UI, ie.: "New Post"
-    folder: "site/content/post" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
+  - name: "publication" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Publication" # Used in the UI, ie.: "New Post"
+    folder: "site/content/publication" # The path to the folder where the documents are stored
+    create: false # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
@@ -31,10 +31,19 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Intro", name: intro, widget: object, fields: [
               {label: "Heading", name: "heading", widget: string},
               {label: "Text", name: "text", widget: "text"}]}
-          - {label: "projects", name: projects, widget: list, fields: [
-              {label: "Image", name: "image", widget: "image"},
+          - {label: "Featured Projects", name: "featured_projects", widget: "relation", collection: "projects", searchFields: ["heading"], valueField: "heading"}
+          - {label: "Values Summary", name: "values_summary", widget: "relation", collection: "values", searchFields: ["heading"], valueField: "heading"}
+      - file: "site/content/about/_index.md"
+        label: "About Page"
+        name: "about"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Subtitle, name: subtitle, widget: string}
+          - {label: Image, name: image, widget: image}
+          - {label: "Blurb", name: blurb, widget: object, fields: [
+              {label: "Heading", name: "heading", widget: string},
               {label: "Text", name: "text", widget: "text"}]}
-          - {label: "Values", name: "values", widget: "object", fields: [
+          - {label: "Intro", name: intro, widget: object, fields: [
               {label: "Heading", name: "heading", widget: string},
               {label: "Text", name: "text", widget: "text"}]}
       - file: "site/content/contact/_index.md"
@@ -84,7 +93,7 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
           - {label: Full_image, name: full_image, widget: image}
           - {label: Pricing, name: pricing, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: string}, {label: Plans, name: plans, widget: list, fields: [{label: Plan, name: plan, widget: string}, {label: Price, name: price, widget: string}, {label: Description, name: description, widget: string}, {label: Items, name: items, widget: list}]}]}
-      - file: "site/content/values/_index.md"
+      - file: "site/content/about/values.md"
         label: "Values Page"
         name: "values"
         fields:
@@ -97,11 +106,12 @@ collections: # A list of collections the CMS should be able to edit
               - {label: Heading, name: heading, widget: string}
               - {label: Text, name: text, widget: text}
               - {label: Image, name: imageUrl, widget: image}
-      - file: "site/content/faq/_index.md"
+      - file: "site/content/resources/faq.md"
         label: "FAQ"
         name: "faq"
         fields:
           - {label: Title, name: title, widget: string}
+          - {label: Description, name: description, widget: string}
           - label: Questions
             name: questions
             widget: list
@@ -109,10 +119,26 @@ collections: # A list of collections the CMS should be able to edit
               - {label: Question, name: question, widget: string}
               - {label: Answer, name: answer, widget: text}
               - {label: File, name: file, widget: file, default: "/files/"}
+
+      - file: "site/content/resources/publications.md"
+        label: "Publications"
+        name: "publications"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Description, name: description, widget: string}
+          - label: Publications
+            name: publications
+            widget: list
+            fields:
+              - {label: File, name: fileURL, widget: file}
+              - {label: Heading, name: heading, widget: string}
+              - {label: Authors, name: authors, widget: string}
+              - {label: Date, name: date, widget: date}
+              - {label: Description, name: description, widget: text}
   - name: "people" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "People" # Used in the UI, ie.: "New Post"
     files:
-      - file: "site/content/people/_index.md" # The path to the folder where the documents are stored
+      - file: "site/content/people/_index.md" # The path to the file where the documents are stored
         label: "Team Info"
         name: "team"
         fields:
@@ -127,6 +153,7 @@ collections: # A list of collections the CMS should be able to edit
               - {label: Role1, name: role1, widget: text}
               - {label: Role2, name: role2, widget: text}
               - {label: Text, name: text, widget: text}
+
   - name: "videos" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Videos" # Used in the UI, ie.: "New Post"
     files:

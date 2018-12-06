@@ -1,0 +1,50 @@
+{{ define "main" }}
+
+{{/* {{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title) }} */}}
+ {{/* {{ partial "generics/sidebar-section-nav" . }} */}}
+<div class="mw7 center ph3 pt4">
+
+
+
+
+  {{ partial "short-text" .Params.about }}
+  {{ partial "short-text" .Params.extra }}
+  {{ with .Site.GetPage "/about/values" }}
+  <div class="mw7 center ph3 pt4">
+    <h2 class="f2 b lh-title w-40-l">{{.Title}}</h2>
+    {{ range $index, $element := .Params.values }}
+      {{ if modBool $index 2 }}
+        {{ partial "media-block" $element }}
+      {{ else }}
+        {{ partial "media-block-reverse" $element }}
+      {{ end }}
+    {{ end }}
+
+  </div>
+  {{end }}
+
+  <div class="mw7 center ph3 pt4">
+    <div class="mhn1-l ph3 cf">
+      {{ with .Site.GetPage "about/people" }}
+      <!-- {{ printf "%#v" .Params.people }} -->
+      {{ range $index, $element := .Params.people}}
+      <!-- {{ printf "%#v" $element }} -->
+      <div class="fl w-100 w-50-ns pa1">
+        {{ partial "team-card-horizontal" (dict "name" $element.name "role1" $element.role1 "role2" $element.role2 "text" $element.text "image" $element.imageUrl)}}
+      </div>
+      {{ end }}
+      {{ end }}
+    </div>
+  </div>
+
+  {{/* {{ range $index, $element := .Params }}
+    {{ if modBool $index 2 }}
+      {{ partial "media-block" $element }}
+    {{ else }}
+      {{ partial "media-block-reverse" $element }}
+    {{ end }}
+  {{ end }} */}}
+
+</div>
+
+{{ end }}

@@ -1,5 +1,6 @@
 ---
 title: Contact
+weight: 5
 logo: /img/logos/EC_logo.svg
 contact_entries:
   - heading: Address

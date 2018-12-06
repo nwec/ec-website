@@ -1,0 +1,71 @@
+{{ define "main" }}
+
+{{/* {{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title) }} */}}
+<div class="mw7 center ph3 pt4">
+
+  {{ partial "short-text" .Params.about }}
+  {{ partial "short-text" .Params.extra }}
+  {{ with .Site.GetPage "/resources/publications" }}
+  <div class="mw7 center ph3 pt4">
+    <h2 class="f2 b lh-title w-40-l">{{.Title}}</h2>
+    {{ with .Params.publications }}
+
+      <div class="nowrap overflow-x-auto overflow-y-auto mw8 center">
+      {{ range $index, $element := .}}
+
+        {{ partial "generics/sidescroll-item" (dict "heading" .heading "description" .description "date" .date "subheading" .authors) }}
+
+        {{/* {{ partial "generics/item" (dict "heading" .heading "description" .description "date" .date "subheading" .authors)}} */}}
+
+      {{ end }}
+
+    </div>
+    {{ end }}
+
+  </div>
+  {{end }}
+
+  {{ with .Site.GetPage "/resources/faq" }}
+  <div class="mw7 center ph3 pt4">
+    <h2 class="f2 b lh-title w-40-l">{{.Title}}</h2>
+    <div class="mw7 center ph3 pt4">
+
+      {{ range $index, $element := .Params.questions }}
+      <!-- {{ printf "%#v" $element }} -->
+      {{ partial "faq-cordian" (dict "question" $element.question "answer" $element.answer )}}
+      {{ end }}
+    </div>
+
+  </div>
+  {{end }}
+
+  <div class="mw7 center ph3 pt4">
+    <div class="mhn1-l ph3 cf">
+      <section id="videos" class="center pt4 pb2 mw7">
+        <h2 class="f2 b lh-title mb2 ">Videos</h2>
+        <article class="mhn1-l ph3 cf">
+          {{ with .Site.GetPage "section" "videos" }}
+          {{ range $index, $element := .Params.youtube}}
+
+          <div class="fl w-100 w-50-ns pa1 ">
+
+            {{ partial "youtube" (dict "id" $element.id )}}
+
+          </div>
+          {{ end }} {{ end }}
+        </article>
+      </section>
+    </div>
+  </div>
+
+  {{/* {{ range $index, $element := .Params }}
+    {{ if modBool $index 2 }}
+      {{ partial "media-block" $element }}
+    {{ else }}
+      {{ partial "media-block-reverse" $element }}
+    {{ end }}
+  {{ end }} */}}
+
+</div>
+
+{{ end }}
