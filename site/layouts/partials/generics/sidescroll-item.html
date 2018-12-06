@@ -1,7 +1,19 @@
     <article class="dib w-100 w-50-m  w-25-ns pa2-ns bg-warm-white shadow-3">
        <div class="aspect-ratio aspect-ratio--1x1">
-         <img style="background-image:url(http://mrmrs.github.io/images/0006.jpg);"
+          {{ $file_type_arr := split .link "." }}
+          {{ $file_ext := index $file_type_arr 1 }}
+
+          {{ if eq $file_ext "pdf" }}
+          {{ $preview_image := "https://i.stack.imgur.com/Zpt8n.jpg" | html}}
+          <img style="background-image:url('{{$preview_image }}');"
+          class="db bg-center cover aspect-ratio--object z-2" />
+          {{ else }}
+          {{ $preview_image := .link }}
+
+
+         <img style="background-image:url('{{$preview_image }}');"
          class="db bg-center cover aspect-ratio--object z-2" />
+        {{ end }}
        </div>
        <a href="{{.link}}" class="ph2 ph0-ns pb3 link db">
          <dl class="">

@@ -1,15 +1,15 @@
 <nav class="sticky">
-<div class="v-btm dynamic-nav bg-info white tc center pv3 z-5 br-100  br--bottom shadow-5">
+<div class="v-btm dynamic-nav bg-info white tc center pv3 z-999 br-100  br--bottom shadow-5">
 {{ $currentPage := . }}
-<a href="/" class="growph4-l ph3 no-underline dib f6 f5-l dib mr3 mr4-l bg-animate hover-bg-blue br-100 br--bottom">Home</a>
+<a href="/" class="shadow-hover  ph4-l ph3 no-underline dib f6 f5-l dib mr3 mr4-l bg-animate">Home</a>
 {{ range .Site.Menus.main }}
-<a class="dynamic-nav-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}} growph4-l ph3 no-underline dib f6 f5-l dib mr3 mr4-l bg-animate hover-bg-blue br-100 br--bottom" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+<a class="dynamic-nav-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}} grow ph4-l ph3 no-underline dib f6 f5-l dib mr3 mr4-l bg-animate" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
 {{ end }}
 
 
 </div>
 {{ if not .Page.IsHome}}
-<aside id="breadcrumb" class="z-4 white relative w-100 shadow-5 bg-warning br-pill br--right  mw6">
+<aside id="breadcrumb" class="z-999 white relative w-100 shadow-5 bg-warning br-pill br--right  mw6">
 {{ partial "breadcrumb" . }}
  </aside>
 

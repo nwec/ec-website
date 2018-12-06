@@ -1,8 +1,7 @@
 {{ define "main" }}
   <main>
-          {{/* {{ printf "%#v"  .Params}} */}}
+          {{ printf "%#v"  .Params}}
            {{ partial "generics/sidebar-section-nav" . }}
-          <h1> In this section </h1>
           <ul class="contents">
             {{ template "_internal/pagination.html" . }}
             {{ range .Paginator.Pages }}

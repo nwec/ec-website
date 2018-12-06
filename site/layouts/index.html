@@ -32,7 +32,7 @@
 </section>
 
 {{ with .Site.GetPage "/resources"  }}
-<section id="{{anchorize .Title }}" class="bg-success">
+<section id="{{anchorize .Title }}" class="bg-success white">
   {{ partial "generics/section-layout" (dict "title" .Title "link" .Permalink "p1" .Params.about.text "action0" "/publications" "action0desc" "Publications" "action1" "/faq" "action1desc" "Question & Answers" "action2" "/videos" "action2desc" "Videos" "bgColor" "bg-warm-white")}}
 
   <section id="faq" class="center pt4 pb2 mw7 mhn1-l ph3 cf">
@@ -49,7 +49,7 @@
 </section>
 {{ end }}
 {{ with .Site.GetPage "/contact"  }}
-<section id="{{anchorize .Title }}" class="bg-warning z-5">
+<section id="{{anchorize .Title }}" class="bg-success white z-5">
 
   {{ partial "generics/section-layout" (dict "title" .Title "link" .Permalink "p1" (partial "contact-form" . ) "bgColor" "bg-warning" "orient" "left")}}
   <div class="mw7 center">

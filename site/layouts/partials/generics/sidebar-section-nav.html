@@ -1,4 +1,4 @@
-
+{{ if .Paginator.Pages }}
   <h4> In this section: </h4>
   <ul class="contents">
     {{ template "_internal/pagination.html" . }}
@@ -19,3 +19,4 @@
     </div>
     {{ end }}
   </ul>
+  {{end }}
